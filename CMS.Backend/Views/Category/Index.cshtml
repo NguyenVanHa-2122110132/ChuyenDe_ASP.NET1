@@ -1,0 +1,31 @@
+﻿
+    @* Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 16/05/2026
+    Mô tả    : Giao diện quản lý Danh mục (Category)
+              - Hiển thị danh sách tất cả chuyên mục dưới dạng bảng
+              - Hiện tại đang nhận dữ liệu mẫu từ CategoryController *@
+
+@model IEnumerable<CMS.Data.Entities.Category>
+
+<h2 class="text-primary">DANH SÁCH DANH MỤC (DỮ LIỆU MẪU)</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên danh mục</th>
+            <th>Mô tả</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
