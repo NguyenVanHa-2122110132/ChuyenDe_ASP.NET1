@@ -1,0 +1,65 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Giao diện chi tiết sản phẩm (Product Details)
+              - Hiển thị ảnh lớn bên trái, thông tin giá bán và nút mua bên phải
+              - File nằm tại: Views/Product/Details.cshtml
+*@
+
+@model CMS.Data.Entities.Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container mt-5">
+    <!-- Breadcrumb (Đường dẫn điều hướng) -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/Product">Cửa hàng</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+        </ol>
+    </nav>
+
+    <div class="row mt-4">
+        <!-- Ảnh sản phẩm bên trái -->
+        <div class="col-md-6 text-center mb-4">
+            <div class="p-4 border rounded-3 bg-light shadow-sm">
+                <img src="@Model.ImageUrl" class="img-fluid" alt="@Model.Name" style="max-height: 400px; object-fit: contain;">
+            </div>
+        </div>
+
+        <!-- Thông tin và nút mua bên phải -->
+        <div class="col-md-6">
+            <h1 class="fw-bold text-dark display-5 mb-3">@Model.Name</h1>
+            <hr>
+
+            <!-- Giá tiền cực lớn -->
+            <div class="my-4">
+                <span class="text-muted fs-5 text-decoration-line-through">@((Model.Price * 1.1m).ToString("N0")) VNĐ</span> <!-- Giá gốc giả lập -->
+                <h2 class="text-danger fw-bold display-4 mt-1">
+                    @Model.Price.ToString("N0") <span class="fs-4">VNĐ</span>
+                </h2>
+                <span class="badge bg-success">Trả góp 0%</span>
+                <span class="badge bg-danger">Mới 100% (Fullbox)</span>
+            </div>
+
+            <!-- Mô tả ngắn -->
+            <div class="mb-4">
+                <h5 class="fw-bold">Mô tả sản phẩm:</h5>
+                <p class="text-muted fs-5">@Model.Description</p>
+            </div>
+
+            <!-- Nút hành động -->
+            <div class="d-grid gap-2 col-lg-8">
+                <button class="btn btn-danger btn-lg shadow"><i class="bi bi-lightning-fill"></i> MUA NGAY (Giao nhanh 2h)</button>
+                <button class="btn btn-outline-danger btn-lg"><i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

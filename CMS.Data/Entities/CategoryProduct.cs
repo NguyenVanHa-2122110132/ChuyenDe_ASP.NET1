@@ -1,30 +1,20 @@
 ﻿/*
-Họ Và Tên: Nguyễn Văn Hà
-MSSV: 2122110132
-Lớp: CCQ2211D
-Ngày Tạo:16/05/2026
-Mô Tả: Thực Thể Danh Mục sản phẩm*/
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Thực thể trung gian liên kết Danh mục (Category) và Sản phẩm (Product)
+*/
+using System.ComponentModel.DataAnnotations.Schema;
 
-using System.ComponentModel.DataAnnotations;
 namespace CMS.Data.Entities
 {
     public class CategoryProduct
     {
-        [Key]//khoá chính
-        public int Id { get; set; }// mã danh mục
+        public int CategoryId { get; set; } // Khóa ngoại nối sang bảng Category
+        public int ProductId { get; set; }  // Khóa ngoại nối sang bảng Product
 
-        [Required(ErrorMessage = "Tên danh mục không được để trống")]
-        [StringLength(100)] // giới hạn độ dài chuôi
-        public string Name { get; set; }// tên danh mục
-
-        public string? Description { get; set; }// mô tả danh mục
-
-        // Quan hệ: Một danh mục có nhiều sản phẩm
-        public virtual ICollection<Product>? Products { get; set; }
-
+        public virtual Category Category { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

@@ -1,0 +1,64 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Giao diện danh sách sản phẩm điện thoại để bán (Product Index)
+              - Hiển thị danh sách sản phẩm dưới dạng Card thương mại điện tử
+              - Có giá tiền định dạng VNĐ, nút thêm vào giỏ hàng
+              - File nằm tại: Views/Product/Index.cshtml
+*@
+
+@model IEnumerable<CMS.Data.Entities.Product>
+
+@{
+    ViewData["Title"] = "Cửa hàng điện thoại";
+}
+
+<div class="container mt-4">
+    <!-- Tiêu đề trang trí đẹp mắt -->
+    <div class="text-center mb-5">
+        <h2 class="text-danger fw-bold display-5">
+            <i class="bi bi-phone-vibrate-fill"></i> SIÊU THỊ ĐIỆN THOẠI MAI TRINH
+        </h2>
+        <p class="text-muted fs-5">Cam kết chính hãng - Trả góp 0% - Giao hàng nhanh 2h</p>
+    </div>
+
+    <!-- Danh sách sản phẩm dạng Grid Card -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                    <!-- Ảnh sản phẩm cố định khung, không lo lệch card -->
+                    <div class="text-center p-3 bg-light" style="height: 250px;">
+                        <img src="@item.ImageUrl" class="img-fluid h-100" alt="@item.Name" style="object-fit: contain;">
+                    </div>
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold text-dark mb-2">@item.Name</h5>
+                        <p class="card-text text-muted small text-truncate mb-3">@item.Description</p>
+
+                        <!-- Hiển thị giá tiền dạng VNĐ màu đỏ nổi bật -->
+                        <div class="mt-auto">
+                            <h4 class="text-danger fw-bold mb-3">
+                                @item.Price.ToString("N0") <small class="fs-6">VNĐ</small>
+                            </h4>
+                            <div class="d-grid gap-2">
+                                <a href="/Product/Details/@item.Id" class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-info-circle"></i> Thông số kỹ thuật
+                                </a>
+                                <button class="btn btn-danger btn-sm">
+                                    <i class="bi bi-cart-plus-fill"></i> Mua ngay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

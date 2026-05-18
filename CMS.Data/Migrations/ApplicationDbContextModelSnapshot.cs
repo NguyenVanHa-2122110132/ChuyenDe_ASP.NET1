@@ -45,21 +45,15 @@ namespace CMS.Data.Migrations
 
             modelBuilder.Entity("CMS.Data.Entities.CategoryProduct", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("CategoryId", "ProductId");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("CategoriesProducts");
                 });
@@ -192,13 +186,12 @@ namespace CMS.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CategoryProductId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -208,12 +201,7 @@ namespace CMS.Data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoryProductId");
 
                     b.ToTable("Products");
                 });
@@ -245,6 +233,25 @@ namespace CMS.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("CMS.Data.Entities.CategoryProduct", b =>
+                {
+                    b.HasOne("CMS.Data.Entities.Category", "Category")
+                        .WithMany("CategoryProducts")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CMS.Data.Entities.Product", "Product")
+                        .WithMany("CategoryProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("CMS.Data.Entities.Order", b =>
@@ -288,25 +295,11 @@ namespace CMS.Data.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("CMS.Data.Entities.Product", b =>
-                {
-                    b.HasOne("CMS.Data.Entities.CategoryProduct", "CategoryProduct")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CategoryProduct");
-                });
-
             modelBuilder.Entity("CMS.Data.Entities.Category", b =>
                 {
-                    b.Navigation("Posts");
-                });
+                    b.Navigation("CategoryProducts");
 
-            modelBuilder.Entity("CMS.Data.Entities.CategoryProduct", b =>
-                {
-                    b.Navigation("Products");
+                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("CMS.Data.Entities.Customer", b =>
@@ -317,6 +310,11 @@ namespace CMS.Data.Migrations
             modelBuilder.Entity("CMS.Data.Entities.Order", b =>
                 {
                     b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("CMS.Data.Entities.Product", b =>
+                {
+                    b.Navigation("CategoryProducts");
                 });
 #pragma warning restore 612, 618
         }

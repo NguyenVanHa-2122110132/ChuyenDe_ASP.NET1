@@ -12,3 +12,4 @@ D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Data\obj\Debug\net10.0\ref\CMS.Data.dll
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Data\bin\Debug\net10.0\CMS.Data.runtimeconfig.json
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Data\obj\Debug\net10.0\CMS.Data.csproj.AssemblyReference.cache
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Data\obj\Debug\net10.0\CMS.Data.genruntimeconfig.cache
+D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Data\obj\Debug\net10.0\CMS.Data.sourcelink.json

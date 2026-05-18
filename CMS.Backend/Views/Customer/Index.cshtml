@@ -1,0 +1,69 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Giao diện danh sách Khách hàng (Customer Index - BÀI TẬP 5)
+              - Hiển thị danh sách dưới dạng bảng Admin chuyên nghiệp, có icon đẹp
+              - File nằm tại: Views/Customer/Index.cshtml
+*@
+
+@model IEnumerable<CMS.Data.Entities.Customer>
+
+@{
+    ViewData["Title"] = "Quản lý khách hàng";
+}
+
+<div class="container mt-4">
+    <!-- Tiêu đề trang trí chuyên nghiệp -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-dark fw-bold">
+            <i class="bi bi-person-badge-fill text-primary"></i> QUẢN LÝ KHÁCH HÀNG 
+        </h2>
+        <span class="badge bg-primary fs-6 px-3 py-2">Tổng số khách: @Model.Count()</span>
+    </div>
+
+    <!-- Bảng danh sách khách hàng -->
+    <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+        <div class="card-body p-0">
+            <table class="table table-hover table-striped mb-0 text-center align-middle">
+                <thead class="table-primary text-dark">
+                    <tr>
+                        <th width="10%">ID</th>
+                        <th width="30%">Họ và tên khách hàng</th>
+                        <th width="20%">Số điện thoại</th>
+                        <th width="30%">Địa chỉ giao hàng</th>
+                        <th width="10%">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold text-muted">@customer.Id</td>
+                            <td class="text-start fw-semibold text-dark ps-4">
+                                <i class="bi bi-person-circle text-secondary me-2"></i> @customer.FullName
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark border p-2">
+                                    <i class="bi bi-telephone-fill text-success me-1"></i> @customer.Phone
+                                </span>
+                            </td>
+                            <td class="text-start text-muted ps-4">
+                                <i class="bi bi-geo-alt-fill text-danger me-1"></i> @customer.Address
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary" title="Xem chi tiết mua sắm">
+                                    <i class="bi bi-eye-fill"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

@@ -1,34 +1,26 @@
 ﻿/*
-Họ Và Tên: Nguyễn Văn Hà
-MSSV: 2122110132
-Lớp: CCQ2211D
-Ngày Tạo:16/05/2026
-Mô Tả: Thực Thể Đơn Hàng*/
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Thực thể Đơn hàng (Order)
+*/
+
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 namespace CMS.Data.Entities
 {
     public class Order
     {
-        [Key]// khoá chính
-        public int Id { get; set; }// mã duy nhất của mỗi dơn hàng
+        public int Id { get; set; }
+        public DateTime OrderDate { get; set; }
 
-        public DateTime OrderDate { get; set; } = DateTime.Now;// NGÀY ĐẶT HÀNG (Mặc định là thời điểm hiện tại khi tạo đơn)
+        public int CustomerId { get; set; }
+        public int Status { get; set; }   // 1 = Đã xác nhận, 0 = Chờ xử lý
+        public string? Notes { get; set; }
 
-        public int CustomerId { get; set; }//KHÓA NGOẠI (FOREIGN KEY) tới Khách hàng (Customer)
-
-        public int Status { get; set; } // 0: Chờ duyệt, 1: Đang giao, 2: Đã xong
-
-        public string? Notes { get; set; }//ghi chú đơn hàng
-
-        [ForeignKey("CustomerId")]//CHỈ ĐỊNH KHÓA NGOẠI CHO NAVIGATION PROPERTY Customer
-        public virtual Customer? Customer { get; set; }
-
-        public virtual ICollection<OrderDetail>? OrderDetails { get; set; }
+        public virtual Customer Customer { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
     }
 }

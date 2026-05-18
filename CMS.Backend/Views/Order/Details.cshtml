@@ -1,0 +1,69 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Giao diện chi tiết đơn hàng (Bài 7)
+*@
+
+@model CMS.Data.Entities.Order
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+    var tongTien = Model.OrderDetails.Sum(x => x.UnitPrice * x.Quantity);
+}
+
+<div class="container mt-4">
+    <h2 class="fw-bold text-primary mb-4">
+        <i class="bi bi-file-earmark-text"></i> CHI TIẾT ĐƠN HÀNG #@Model.Id
+    </h2>
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+            <h5 class="fw-bold mb-3">Thông tin khách hàng</h5>
+            <p><strong>Họ tên:</strong> @Model.Customer?.FullName</p>
+            <p><strong>Điện thoại:</strong> @Model.Customer?.Phone</p>
+            <p><strong>Địa chỉ:</strong> @Model.Customer?.Address</p>
+            <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm")</p>
+            <p><strong>Ghi chú:</strong> @Model.Notes</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <table class="table table-bordered table-hover mb-0 align-middle text-center">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderDetails)
+                    {
+                        <tr>
+                            <td>@item.ProductId</td>
+                            <td>@item.Product?.Name</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.UnitPrice.ToString("N0") VNĐ</td>
+                            <td class="fw-bold text-danger">@((item.Quantity * item.UnitPrice).ToString("N0")) VNĐ</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="text-end mt-4">
+        <h4 class="fw-bold">Tổng cộng: <span class="text-danger">@tongTien.ToString("N0") VNĐ</span></h4>
+    </div>
+
+    <div class="mt-4">
+        <a href="/Order" class="btn btn-secondary">← Quay lại danh sách đơn hàng</a>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
