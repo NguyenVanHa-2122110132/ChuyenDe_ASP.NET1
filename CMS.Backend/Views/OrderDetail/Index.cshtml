@@ -1,0 +1,63 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Trang danh sách Chi tiết Đơn hàng trong khu vực Admin.
+              - Nhận dữ liệu từ OrderDetailController (action Index)
+              - Hiển thị danh sách chi tiết đơn hàng gồm: Mã đơn, Sản phẩm, Số lượng, Đơn giá, Thành tiền
+              - Nút "Thêm mới" dẫn đến trang Create
+              - Nút "Sửa" dẫn đến trang Edit theo từng ID
+              - Nút "Xóa" gửi POST request xóa chi tiết đơn hàng, có hộp thoại xác nhận
+*@
+@model IEnumerable<CMS.Data.Entities.OrderDetail>
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Chi tiết Đơn hàng</h2>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Thêm mới
+    </a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.Product?.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.UnitPrice.ToString("N0") VNĐ</td>
+                <td>@((item.Quantity * item.UnitPrice).ToString("N0")) VNĐ</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"
+                       class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil"></i> Sửa
+                    </a>
+                    <form asp-action="Delete" method="post" style="display:inline"
+                          onsubmit="return confirm('Bạn có chắc muốn xóa chi tiết này?')">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

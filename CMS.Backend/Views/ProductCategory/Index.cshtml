@@ -1,0 +1,53 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 18/05/2026
+    Mô tả    : Trang danh sách Danh mục Sản phẩm trong khu vực Admin.
+              - Nhận dữ liệu từ ProductCategoryController (action Index)
+              - Hiển thị danh sách liên kết giữa Danh mục và Sản phẩm dạng bảng
+              - Nút "Thêm mới" dẫn đến trang Create để tạo liên kết mới
+              - Nút "Xóa" gửi POST request xóa liên kết, có hộp thoại xác nhận
+*@
+@model IEnumerable<CMS.Data.Entities.CategoryProduct>
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Danh mục sản phẩm";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Danh mục Sản phẩm</h2>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Thêm mới
+    </a>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Danh mục</th>
+            <th>Sản phẩm</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Category?.Name</td>
+                <td>@item.Product?.Name</td>
+                <td>
+                    <form asp-action="Delete" method="post" style="display:inline"
+                          onsubmit="return confirm('Bạn có chắc muốn xóa liên kết này?')">
+                        <input type="hidden" name="categoryId" value="@item.CategoryId" />
+                        <input type="hidden" name="productId" value="@item.ProductId" />
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

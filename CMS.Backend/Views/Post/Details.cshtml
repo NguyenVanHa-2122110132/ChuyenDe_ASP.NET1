@@ -6,6 +6,8 @@
     Mô tả    : Trang chi tiết sản phẩm điện thoại (Post Details)
               - Hiển thị tiêu đề, ngày đăng, ảnh lớn, nội dung chi tiết
               - Có breadcrumb và nút quay lại danh sách
+              - Dùng @Html.Raw() để render đúng định dạng HTML từ CKEditor
+                (nếu không dùng Html.Raw thì các thẻ <p>, <strong>... sẽ hiện ra dưới dạng text)
 *@
 @model CMS.Data.Entities.Post
 
@@ -16,19 +18,23 @@
             <li class="breadcrumb-item active">Chi tiết bài viết</li>
         </ol>
     </nav>
-
     <div class="row justify-content-center">
         <div class="col-md-10">
             <h1 class="display-4 fw-bold text-primary">@Model.Title</h1>
+
+            @* Hiển thị tên danh mục dưới dạng badge *@
+            <span class="badge bg-primary mb-2 fs-6">@Model.Category?.Name</span>
+
             <p class="text-muted">Đăng ngày: @Model.CreatedDate.ToString("dd/MM/yyyy HH:mm")</p>
             <hr />
 
             <div class="text-center mb-4">
-                <img src="@Model.ImageUrl" class="img-fluid rounded shadow" alt="Post Image" style="width: 100%;">
+                <img src="@Model.ImageUrl" class="img-fluid rounded shadow"
+                     alt="Post Image" style="width: 100%;">
             </div>
 
             <div class="post-content fs-5 leading-lg">
-                @Model.Content
+                @Html.Raw(Model.Content)  @* ← Render HTML từ CKEditor đúng định dạng *@
             </div>
 
             <div class="mt-5 border-top pt-3">

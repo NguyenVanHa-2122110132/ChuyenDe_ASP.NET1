@@ -1,0 +1,85 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 16/05/2026
+    Mô tả    : Trang thêm mới Bài viết trong khu vực Admin.
+              - Hiển thị form nhập liệu gồm: Tiêu đề, Nội dung, Ảnh, Danh mục
+              - Tích hợp CKEditor 5 cho ô Nội dung — hỗ trợ định dạng văn bản phong phú
+              - Danh mục được load từ database xuống dropdown để chọn
+              - Khi bấm Lưu sẽ gửi POST request đến PostController (action Create)
+              - Khi bấm Hủy bỏ sẽ trở về trang danh sách Post
+*@
+@model CMS.Data.Entities.Post
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Thêm bài viết";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary mb-0">THÊM BÀI VIẾT MỚI</h2>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Quay lại
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Tiêu đề:</label>
+                <input asp-for="Title" class="form-control"
+                       placeholder="Nhập tiêu đề bài viết..." />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Nội dung chi tiết:</label>
+                {{! CKEditor sẽ thay thế textarea này, id="Content" phải khớp với script bên dưới !}}
+                <textarea asp-for="Content" class="form-control" rows="10"></textarea>
+                <span asp-validation-for="Content" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Đường dẫn ảnh (URL):</label>
+                <input asp-for="ImageUrl" class="form-control"
+                       placeholder="https://..." />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Danh mục:</label>
+                <select asp-for="CategoryId"
+                        asp-items="ViewBag.Categories"
+                        class="form-select">
+                    <option value="">-- Chọn danh mục --</option>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger small"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-save"></i> Lưu vào hệ thống
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+        {{! Load thư viện CKEditor 5 từ CDN !}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    <script>
+        // Kích hoạt CKEditor cho textarea có id="Content"
+        // asp-for="Content" tự sinh ra id="Content" nên khớp chính xác
+        ClassicEditor
+            .create(document.querySelector('#Content'))
+            .catch(error => {
+                console.error(error); // In lỗi ra console nếu CKEditor không khởi động được
+            });
+    </script>
+}

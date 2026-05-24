@@ -2,15 +2,98 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 16/05/2026
-    Mô tả    : Trang chủ (Home Page) của hệ thống Mai Trinh Mobile Shop
-              - Hiển thị tiêu đề cửa hàng
+    Ngày tạo : 23/05/2026
+    Mô tả    : Trang chủ - Banner, Features và hiển thị bài viết mới nhất
 *@
+@model IEnumerable<CMS.Data.Entities.Post>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Mai Trinh Mobile Shop</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- PHẦN 1: BANNER CHÀO MỪNG -->
+<div class="p-5 mb-4 bg-light rounded-3 text-center border shadow-sm"
+     style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="container-fluid py-5">
+        <h1 class="display-4 fw-bold text-danger">
+            <i class="bi bi-phone-vibrate"></i> WELLCOME TO MAI TRINH MOBILE
+        </h1>
+        <p class="col-md-8 fs-4 mx-auto text-muted">
+            Thiên đường điện thoại công nghệ cao cấp. Cập nhật những mẫu smartphone mới nhất,
+            chính hãng với giá ưu đãi nhất 2026.
+        </p>
+        <div class="mt-4">
+            <a href="/Post" class="btn btn-danger btn-lg px-4 me-2 shadow">
+                <i class="bi bi-bag-check-fill"></i> Mua điện thoại ngay
+            </a>
+            <a href="/Category" class="btn btn-outline-dark btn-lg px-4">
+                <i class="bi bi-list-ul"></i> Xem danh mục
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- PHẦN 2: CÁC ĐIỂM NỔI BẬT -->
+<div class="container mb-5">
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <div class="h-100 p-4 text-bg-dark rounded-3 shadow">
+                <i class="bi bi-shield-check display-4 text-warning"></i>
+                <h3 class="mt-3">Chính hãng 100%</h3>
+                <p>Cam kết tất cả sản phẩm đều nguyên seal, đầy đủ phụ kiện và bảo hành chính hãng.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="h-100 p-4 bg-light border rounded-3 shadow">
+                <i class="bi bi-truck display-4 text-primary"></i>
+                <h3 class="mt-3">Giao hàng siêu tốc</h3>
+                <p>Nhận hàng trong 2h nội thành, miễn phí vận chuyển cho đơn hàng trên 5 triệu đồng.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="h-100 p-4 text-bg-danger rounded-3 shadow">
+                <i class="bi bi-headset display-4 text-white"></i>
+                <h3 class="mt-3">Hỗ trợ 24/7</h3>
+                <p>Đội ngũ tư vấn viên luôn sẵn sàng giải đáp mọi thắc mắc về kỹ thuật và bảo hành.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PHẦN 3: TIN TỨC MỚI NHẤT -->
+<div class="container mt-3 mb-5">
+    <h2 class="text-center mb-4 text-danger fw-bold">
+        <i class="bi bi-stars"></i> TIN TỨC MỚI NHẤT
+    </h2>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            var plainText = System.Text.RegularExpressions.Regex.Replace(
+            item.Content ?? "", "<.*?>", ""
+            );
+
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100 border-0 rounded-3 overflow-hidden">
+                    <img src="@item.ImageUrl" class="card-img-top"
+                         alt="@item.Title" style="height:200px; object-fit:cover">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary mb-2 align-self-start">
+                            @item.Category?.Name
+                        </span>
+                        <h5 class="card-title fw-bold">@item.Title</h5>
+                        <p class="card-text text-muted small text-truncate">@plainText</p>
+                        <div class="mt-auto">
+                            <a href="/Post/Details/@item.Id"
+                               class="btn btn-outline-danger btn-sm">
+                                <i class="bi bi-arrow-right-circle"></i> Đọc tiếp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted small">
+                        <i class="bi bi-calendar3"></i>
+                        Ngày đăng: @item.CreatedDate.ToString("dd/MM/yyyy")
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>

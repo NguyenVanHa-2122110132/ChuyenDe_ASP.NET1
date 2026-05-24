@@ -4,41 +4,59 @@
     Lớp      : CCQ2211D
     Ngày tạo : 16/05/2026
     Mô tả    : Giao diện danh sách sản phẩm điện thoại (Post)
-              - Hiển thị dưới dạng Card lưới 3 cột (responsive)
-              - Ảnh cố định 240px, object-fit: cover → không bao giờ méo
- 
 *@
 @model IEnumerable<CMS.Data.Entities.Post>
-
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Bài viết";
+}
 <div class="container mt-4">
-    <h2 class="mb-4 text-danger fw-bold">CÁC ĐIỆN THOẠI MỚI NHẤT</h2>
-
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-danger fw-bold mb-0">CÁC ĐIỆN THOẠI MỚI NHẤT</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Thêm mới
+        </a>
+    </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         @foreach (var item in Model)
         {
+            var plainText = System.Text.RegularExpressions.Regex.Replace(
+            item.Content ?? "", "<.*?>", ""
+            );
+
             <div class="col">
                 <div class="card shadow-sm h-100 border-0 rounded-3 overflow-hidden">
-                    <!-- Ảnh cố định chiều cao, không bao giờ méo -->
                     <div class="position-relative overflow-hidden" style="height: 240px;">
                         <img src="@item.ImageUrl"
                              class="w-100 h-100 position-absolute top-50 start-50 translate-middle"
                              alt="@item.Title"
                              style="object-fit: cover;">
                     </div>
-
                     <div class="card-body d-flex flex-column">
+                        <span class="badge bg-info text-dark mb-2 align-self-start">
+                            @(item.Category != null ? item.Category.Name : "Chưa phân loại")
+                        </span>
                         <h5 class="card-title text-primary fw-bold">@item.Title</h5>
-                        <p class="card-text text-muted small text-truncate-3">@item.Content</p>
-
+                        <p class="card-text text-muted small text-truncate-3">@plainText</p>
                         <div class="mt-auto">
                             <p class="text-muted small mb-2">
                                 <i class="bi bi-calendar3"></i>
                                 @item.CreatedDate.ToString("dd/MM/yyyy")
                             </p>
-                            <a href="/Post/Details/@item.Id"
-                               class="btn btn-outline-danger btn-sm w-100">
-                                <i class="bi bi-eye"></i> Xem chi tiết
-                            </a>
+                            <div class="d-flex gap-2">
+                                <a asp-action="Details" asp-route-id="@item.Id"
+                                   class="btn btn-outline-danger btn-sm flex-grow-1">
+                                    <i class="bi bi-eye"></i> Xem
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@item.Id"
+                                   class="btn btn-outline-warning btn-sm">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id"
+                                   class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,8 +64,6 @@
         }
     </div>
 </div>
-
-<!-- Thêm CSS nhỏ để cắt nội dung 3 dòng -->
 <style>
     .text-truncate-3 {
         display: -webkit-box;

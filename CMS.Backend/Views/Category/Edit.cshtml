@@ -1,0 +1,39 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 16/05/2026
+    Mô tả    : Trang chỉnh sửa Danh mục trong khu vực Admin.
+              - Hiển thị form với dữ liệu cũ được điền sẵn để chỉnh sửa
+              - Bắt buộc có input hidden Id để Entity Framework biết sửa đúng dòng
+              - Khi bấm Cập nhật sẽ gửi POST request đến CategoryController (action Edit)
+              - Khi bấm Hủy bỏ sẽ trở về trang danh sách Category
+*@
+@model CMS.Data.Entities.Category
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Sửa danh mục";
+}
+
+<div class="container mt-4">
+    <h2 class="text-warning">SỬA DANH MỤC</h2>
+    <hr />
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label class="form-label">Tên danh mục:</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger small"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Mô tả:</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger small"></span>
+        </div>
+        <button type="submit" class="btn btn-warning">
+            <i class="bi bi-save"></i> Cập nhật
+        </button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+    </form>
+</div>
