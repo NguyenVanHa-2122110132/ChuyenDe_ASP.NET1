@@ -11,6 +11,7 @@
 */
 using CMS.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization; // Thêm namespace để dùng [Authorize]
 using Microsoft.EntityFrameworkCore;
 using CMS.Data;
 using System.Diagnostics;
@@ -19,15 +20,17 @@ namespace CMS.Backend.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context; // Biến kết nối database
 
         public HomeController(ApplicationDbContext context)
         {
-            _context = context;
+            _context = context; // Nhận database context qua Dependency Injection
         }
 
+        // Trang chủ công khai - không cần đăng nhập
         public IActionResult Index()
         {
+            // Lấy 3 bài viết mới nhất, kèm thông tin danh mục
             var latestPosts = _context.Posts
                               .Include(p => p.Category)
                               .OrderByDescending(p => p.CreatedDate)
@@ -36,20 +39,20 @@ namespace CMS.Backend.Controllers
             return View(latestPosts);
         }
 
-        // ← THÊM MỚI: action Dashboard cho khu vực Admin
+        // Dashboard: chỉ Administrator, Admin, Sales, Cashier mới được vào
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         public IActionResult Dashboard()
         {
-            ViewBag.TotalCategories = _context.Categories.Count();
-            ViewBag.TotalPosts = _context.Posts.Count();
-            ViewBag.TotalUsers = _context.Users.Count();
+            ViewBag.TotalCategories = _context.Categories.Count(); // Đếm tổng số danh mục
+            ViewBag.TotalPosts = _context.Posts.Count();           // Đếm tổng số bài viết
+            ViewBag.TotalUsers = _context.Users.Count();           // Đếm tổng số thành viên
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        // Trang chính sách bảo mật - công khai
+        public IActionResult Privacy() => View();
 
+        // Trang xử lý lỗi hệ thống - không cache
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

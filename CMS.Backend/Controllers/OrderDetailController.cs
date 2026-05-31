@@ -8,8 +8,10 @@
               - Create : Hiển thị form và lưu chi tiết đơn hàng mới vào database
               - Edit   : Hiển thị form và cập nhật số lượng, đơn giá
               - Delete : Xóa chi tiết đơn hàng theo ID
+              - Phân quyền: Xem - tất cả trừ Warehouse. Thêm/Sửa - Administrator, Admin, Sales, Cashier. Xóa - Administrator, Admin
 */
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization; // Thêm namespace để dùng [Authorize]
 using CMS.Data;
 using CMS.Data.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +29,8 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== INDEX ==========
+        // Tất cả trừ Warehouse đều được xem chi tiết đơn hàng
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier,Technician,Shipper")]
         public IActionResult Index()
         {
             var orderDetails = _context.OrderDetails
@@ -37,6 +41,8 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== CREATE GET ==========
+        // Chỉ Administrator, Admin, Sales, Cashier mới được thêm chi tiết đơn hàng
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -48,10 +54,11 @@ namespace CMS.Backend.Controllers
             ViewBag.Products = new SelectList(
                 _context.Products.ToList(), "Id", "Name"
             );
-            return View(); // Hiển thị form thêm chi tiết đơn hàng mới
+            return View();
         }
 
         // ========== CREATE POST ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpPost]
         public IActionResult Create(OrderDetail model)
         {
@@ -61,32 +68,27 @@ namespace CMS.Backend.Controllers
                 _context.SaveChanges();             // Lưu thay đổi
                 return RedirectToAction("Index");   // Quay về danh sách
             }
-            ViewBag.Orders = new SelectList(
-                _context.Orders.ToList(), "Id", "Id"
-            );
-            ViewBag.Products = new SelectList(
-                _context.Products.ToList(), "Id", "Name"
-            );
+            ViewBag.Orders = new SelectList(_context.Orders.ToList(), "Id", "Id");
+            ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name");
             return View(model); // Nếu lỗi thì hiển thị lại form
         }
 
         // ========== EDIT GET ==========
+        // Chỉ Administrator, Admin, Sales, Cashier mới được sửa chi tiết đơn hàng
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
             var orderDetail = _context.OrderDetails.Find(id); // Tìm chi tiết đơn hàng theo ID
             if (orderDetail == null) return NotFound();        // Không tìm thấy trả về 404
 
-            ViewBag.Orders = new SelectList(
-                _context.Orders.ToList(), "Id", "Id", orderDetail.OrderId
-            );
-            ViewBag.Products = new SelectList(
-                _context.Products.ToList(), "Id", "Name", orderDetail.ProductId
-            );
-            return View(orderDetail); // Hiển thị form với dữ liệu cũ
+            ViewBag.Orders = new SelectList(_context.Orders.ToList(), "Id", "Id", orderDetail.OrderId);
+            ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name", orderDetail.ProductId);
+            return View(orderDetail);
         }
 
         // ========== EDIT POST ==========
+        [Authorize(Roles = "Administrator,Admin")]
         [HttpPost]
         public IActionResult Edit(OrderDetail model)
         {
@@ -96,16 +98,14 @@ namespace CMS.Backend.Controllers
                 _context.SaveChanges();               // Lưu thay đổi
                 return RedirectToAction("Index");     // Quay về danh sách
             }
-            ViewBag.Orders = new SelectList(
-                _context.Orders.ToList(), "Id", "Id", model.OrderId
-            );
-            ViewBag.Products = new SelectList(
-                _context.Products.ToList(), "Id", "Name", model.ProductId
-            );
+            ViewBag.Orders = new SelectList(_context.Orders.ToList(), "Id", "Id", model.OrderId);
+            ViewBag.Products = new SelectList(_context.Products.ToList(), "Id", "Name", model.ProductId);
             return View(model); // Nếu lỗi thì hiển thị lại form
         }
 
         // ========== DELETE ==========
+        // Chỉ Administrator và Admin mới được xóa chi tiết đơn hàng
+        [Authorize(Roles = "Administrator,Admin")]
         [HttpPost]
         public IActionResult Delete(int id)
         {

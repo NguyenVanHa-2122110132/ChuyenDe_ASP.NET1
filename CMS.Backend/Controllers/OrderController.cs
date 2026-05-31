@@ -6,11 +6,14 @@
     Mô tả    : Controller quản lý Đơn hàng (Order)
               - Index  : Hiển thị danh sách tất cả đơn hàng kèm tên khách hàng
               - Details: Hiển thị chi tiết đơn hàng kèm danh sách sản phẩm
-              - Create : Hiển thị form và lưu đơn hàng mới vào database
-              - Edit   : Hiển thị form và cập nhật trạng thái đơn hàng
+              - Create : Thêm đơn hàng mới
+              - Edit   : Cập nhật trạng thái đơn hàng
               - Delete : Xóa đơn hàng theo ID
+              [BẢO MẬT] Tất cả POST có ValidateAntiForgeryToken
+              [BẢO MẬT] Edit POST chỉ cập nhật đúng field cho phép
 */
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using CMS.Data;
 using CMS.Data.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -20,103 +23,114 @@ namespace CMS.Backend.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly ApplicationDbContext _context; // Biến kết nối database
+        private readonly ApplicationDbContext _context;
 
         public OrderController(ApplicationDbContext context)
         {
-            _context = context; // Nhận database context qua Dependency Injection
+            _context = context;
         }
 
         // ========== INDEX ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier,Technician,Shipper")]
         public IActionResult Index()
         {
             var orders = _context.Orders
-                .Include(o => o.Customer)      // Join bảng Customer để lấy tên khách hàng
-                .Include(o => o.OrderDetails)  // Join bảng OrderDetail để đếm số sản phẩm
+                .Include(o => o.Customer)
+                .Include(o => o.OrderDetails)
                 .ToList();
-            return View(orders); // Truyền danh sách ra View
+            return View(orders);
         }
 
         // ========== DETAILS ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier,Technician,Shipper")]
         public IActionResult Details(int id)
         {
             var order = _context.Orders
-                .Include(o => o.Customer)           // Join bảng Customer
-               .Include(o => o.OrderDetails!)       // Join bảng OrderDetail
-                    .ThenInclude(od => od!.Product)  // Join tiếp bảng Product
+                .Include(o => o.Customer)
+                .Include(o => o.OrderDetails!)
+                    .ThenInclude(od => od!.Product)
                 .FirstOrDefault(o => o.Id == id);
-            if (order == null) return NotFound();    // Không tìm thấy trả về 404
+            if (order == null) return NotFound();
             return View(order);
         }
 
         // ========== CREATE GET ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpGet]
         public IActionResult Create()
         {
-            // Load danh sách khách hàng xuống dropdown
             ViewBag.Customers = new SelectList(
-                _context.Customers.ToList(), "Id", "FullName"
-            );
-            return View(); // Hiển thị form thêm đơn hàng mới
+                _context.Customers.ToList(), "Id", "FullName");
+            return View();
         }
 
         // ========== CREATE POST ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpPost]
+        [ValidateAntiForgeryToken] //  Chống CSRF
         public IActionResult Create(Order model)
         {
-            if (ModelState.IsValid) // Kiểm tra dữ liệu hợp lệ
+            if (ModelState.IsValid)
             {
-                model.OrderDate = DateTime.Now;   // Tự động gán ngày đặt hàng
-                _context.Orders.Add(model);        // Thêm đơn hàng mới vào database
-                _context.SaveChanges();             // Lưu thay đổi
-                return RedirectToAction("Index");   // Quay về danh sách
+                model.OrderDate = DateTime.Now; //  Server tự gán, không tin client
+                _context.Orders.Add(model);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             ViewBag.Customers = new SelectList(
-                _context.Customers.ToList(), "Id", "FullName"
-            );
-            return View(model); // Nếu lỗi thì hiển thị lại form
+                _context.Customers.ToList(), "Id", "FullName");
+            return View(model);
         }
 
         // ========== EDIT GET ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var order = _context.Orders.Find(id); // Tìm đơn hàng theo ID
-            if (order == null) return NotFound();  // Không tìm thấy trả về 404
+            var order = _context.Orders.Find(id);
+            if (order == null) return NotFound();
 
-            // Load danh sách khách hàng, tự chọn đúng khách hàng cũ
             ViewBag.Customers = new SelectList(
-                _context.Customers.ToList(), "Id", "FullName", order.CustomerId
-            );
-            return View(order); // Hiển thị form với dữ liệu cũ
+                _context.Customers.ToList(), "Id", "FullName", order.CustomerId);
+            return View(order);
         }
 
         // ========== EDIT POST ==========
+        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         [HttpPost]
+        [ValidateAntiForgeryToken] //  Chống CSRF
         public IActionResult Edit(Order model)
         {
-            if (ModelState.IsValid) // Kiểm tra dữ liệu hợp lệ
+            if (ModelState.IsValid)
             {
-                _context.Orders.Update(model);    // Cập nhật đơn hàng trong database
-                _context.SaveChanges();            // Lưu thay đổi
-                return RedirectToAction("Index");  // Quay về danh sách
+                //  Chỉ cập nhật đúng field cho phép, không Update() toàn bộ
+                var existing = _context.Orders.Find(model.Id);
+                if (existing == null) return NotFound();
+
+                existing.Status = model.Status;     // Cho phép đổi trạng thái
+                existing.CustomerId = model.CustomerId; // Cho phép đổi khách hàng
+                // OrderDate và TotalAmount KHÔNG cho phép đổi qua form
+
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             ViewBag.Customers = new SelectList(
-                _context.Customers.ToList(), "Id", "FullName", model.CustomerId
-            );
-            return View(model); // Nếu lỗi thì hiển thị lại form
+                _context.Customers.ToList(), "Id", "FullName", model.CustomerId);
+            return View(model);
         }
 
         // ========== DELETE ==========
+        [Authorize(Roles = "Administrator,Admin")]
         [HttpPost]
+        [ValidateAntiForgeryToken] //  Chống CSRF
         public IActionResult Delete(int id)
         {
-            var order = _context.Orders.Find(id); // Tìm đơn hàng theo ID
-            if (order == null) return NotFound();  // Không tìm thấy trả về 404
+            var order = _context.Orders.Find(id);
+            if (order == null) return NotFound();
 
-            _context.Orders.Remove(order); // Xóa đơn hàng khỏi database
-            _context.SaveChanges();         // Lưu thay đổi
-            return RedirectToAction("Index"); // Quay về danh sách
+            _context.Orders.Remove(order);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

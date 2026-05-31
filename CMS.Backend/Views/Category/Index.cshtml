@@ -5,19 +5,18 @@
     Ngày tạo : 16/05/2026
     Mô tả    : Trang danh sách Danh mục trong khu vực Admin.
               - Nhận dữ liệu từ CategoryController (action Index) dưới dạng IEnumerable<Category>
-              - Hiển thị toàn bộ danh mục dưới dạng bảng gồm: ID, Tên, Mô tả, Thao tác
+              - Hiển thị toàn bộ danh mục dưới dạng bảng gồm: STT, Tên, Mô tả, Thao tác
               - Nút "Thêm mới" dẫn đến trang Create
               - Nút "Sửa" dẫn đến trang Edit theo từng ID
               - Nút "Xóa" gửi POST request xóa danh mục, có hộp thoại xác nhận trước khi xóa
               - Hiển thị thông báo lỗi (ErrorMessage) từ TempData nếu xóa thất bại
 *@
 @model IEnumerable<CMS.Data.Entities.Category>
-
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Danh mục";
+    int stt = 1;
 }
-
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="text-primary mb-0">DANH SÁCH DANH MỤC</h2>
@@ -25,7 +24,6 @@
             <i class="bi bi-plus-circle"></i> Thêm danh mục mới
         </a>
     </div>
-
     @if (TempData["ErrorMessage"] != null)
     {
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -33,11 +31,10 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
     }
-
     <table class="table table-bordered">
         <thead class="table-dark">
             <tr>
-                <th>ID</th>
+                <th class="text-center">STT</th>
                 <th>Tên danh mục</th>
                 <th>Mô tả</th>
                 <th>Thao tác</th>
@@ -47,7 +44,7 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Id</td>
+                    <td class="text-center">@stt</td>
                     <td>@item.Name</td>
                     <td>@item.Description</td>
                     <td>
@@ -65,6 +62,7 @@
                         </form>
                     </td>
                 </tr>
+                stt++;
             }
         </tbody>
     </table>

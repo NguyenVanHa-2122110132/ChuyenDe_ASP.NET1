@@ -23,7 +23,6 @@
             font-weight: bold;
             color: #dc3545 !important;
         }
-        /* Màu đỏ nổi bật */
     </style>
 </head>
 <body>
@@ -45,7 +44,18 @@
                         <a class="nav-link" href="#"><i class="bi bi-cart3"></i> Giỏ hàng (0)</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/User"><i class="bi bi-person-circle"></i> Đăng nhập</a>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="nav-link d-flex align-items-center gap-2">
+                                <i class="bi bi-person-circle"></i>
+                                <span>Xin chào, <strong>@User.FindFirst("FullName")?.Value</strong></span>
+                                <a href="/Account/Logout" class="btn btn-outline-danger btn-sm ms-2">Đăng xuất</a>
+                            </div>
+                        }
+                        else
+                        {
+                            <a class="nav-link" href="/Account/Login"><i class="bi bi-person-circle"></i> Đăng nhập</a>
+                        }
                     </li>
                 </ul>
             </div>

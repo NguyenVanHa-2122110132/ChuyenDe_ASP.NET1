@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Database/">
+    <File Path="HaCMS_FullData.sql" />
+  </Folder>
   <Project Path="../cms.frontend/" Type="Website" DisplayName="cms.frontend">
     <BuildType Project="Debug" />
     <Properties Name="WebsiteProperties">

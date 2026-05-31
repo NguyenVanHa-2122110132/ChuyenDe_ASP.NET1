@@ -9,6 +9,7 @@
               - Bắt buộc có input hidden Id để Entity Framework biết sửa đúng dòng
               - Bắt buộc có input hidden CreatedDate để không bị mất ngày tạo khi cập nhật
               - Danh mục được load từ database xuống dropdown, tự chọn đúng danh mục cũ
+              - Hỗ trợ upload ảnh mới từ máy tính, giữ ảnh cũ nếu không upload
               - Khi bấm Cập nhật sẽ gửi POST request đến PostController (action Edit)
               - Khi bấm Hủy bỏ sẽ trở về trang danh sách Post
 *@
@@ -28,9 +29,11 @@
 
 <div class="card shadow-sm">
     <div class="card-body">
-        <form asp-action="Edit" method="post">
-            <input type="hidden" asp-for="Id" />          @* Giữ ID để EF biết sửa đúng dòng *@
-            <input type="hidden" asp-for="CreatedDate" /> @* Giữ ngày tạo không bị mất *@
+        @* Thêm enctype="multipart/form-data" để hỗ trợ upload file *@
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="CreatedDate" />
+            <input type="hidden" asp-for="ImageUrl" />
 
             <div class="mb-3">
                 <label class="form-label fw-bold">Tiêu đề:</label>
@@ -40,20 +43,27 @@
 
             <div class="mb-3">
                 <label class="form-label fw-bold">Nội dung chi tiết:</label>
-                @* CKEditor tự nạp nội dung cũ nhờ asp-for="Content" điền sẵn value *@
                 <textarea asp-for="Content" class="form-control" rows="10"></textarea>
                 <span asp-validation-for="Content" class="text-danger small"></span>
             </div>
 
             <div class="mb-3">
-                <label class="form-label fw-bold">Đường dẫn ảnh (URL):</label>
-                <input asp-for="ImageUrl" class="form-control" />
+                <label class="form-label fw-bold">Ảnh bài viết:</label>
                 @if (Model.ImageUrl != null)
                 {
-                    @* Hiện preview ảnh cũ để tiện kiểm tra *@
-                    <img src="@Model.ImageUrl" class="mt-2 rounded"
-                         style="height:120px; object-fit:cover;" />
+                    <div class="mb-2">
+                        <img id="preview" src="@Model.ImageUrl" class="rounded"
+                             style="height:120px; object-fit:cover;" />
+                    </div>
                 }
+                else
+                {
+                    <img id="preview" src="#" alt="Xem trước ảnh"
+                         style="max-height:120px; display:none; border-radius:8px;" />
+                }
+                <input type="file" name="ImageFile" class="form-control"
+                       accept="image/*" onchange="previewImage(this)" />
+                <small class="text-muted">Chỉ chọn ảnh mới nếu muốn thay ảnh cũ</small>
             </div>
 
             <div class="mb-3">
@@ -78,17 +88,24 @@
 </div>
 
 @section Scripts {
-    @* Load thư viện CKEditor 5 từ CDN *@
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
     <script>
-        // Kích hoạt CKEditor cho textarea có id="Content"
-        // Nội dung cũ đã được asp-for="Content" điền sẵn vào textarea
-        // CKEditor sẽ tự nạp nội dung đó lên trình soạn thảo
         ClassicEditor
             .create(document.querySelector('#Content'))
-            .catch(error => {
-                console.error(error); // In lỗi ra console nếu CKEditor không khởi động được
+            .catch(function(error) {
+                console.error(error);
             });
+
+        function previewImage(input) {
+            var preview = document.getElementById('preview');
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 }

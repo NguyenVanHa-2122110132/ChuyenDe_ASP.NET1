@@ -7,45 +7,46 @@
               - Hiển thị form nhập liệu gồm: Tiêu đề, Nội dung, Ảnh, Danh mục
               - Tích hợp CKEditor 5 cho ô Nội dung — hỗ trợ định dạng văn bản phong phú
               - Danh mục được load từ database xuống dropdown để chọn
+              - Hỗ trợ upload ảnh từ máy tính thay vì nhập URL
               - Khi bấm Lưu sẽ gửi POST request đến PostController (action Create)
               - Khi bấm Hủy bỏ sẽ trở về trang danh sách Post
 *@
 @model CMS.Data.Entities.Post
-
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Thêm bài viết";
 }
-
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="text-primary mb-0">THÊM BÀI VIẾT MỚI</h2>
     <a asp-action="Index" class="btn btn-secondary">
         <i class="bi bi-arrow-left"></i> Quay lại
     </a>
 </div>
-
 <div class="card shadow-sm">
     <div class="card-body">
-        <form asp-action="Create" method="post">
-
+        @* Thêm enctype="multipart/form-data" để hỗ trợ upload file *@
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label fw-bold">Tiêu đề:</label>
                 <input asp-for="Title" class="form-control"
                        placeholder="Nhập tiêu đề bài viết..." />
                 <span asp-validation-for="Title" class="text-danger small"></span>
             </div>
-
             <div class="mb-3">
                 <label class="form-label fw-bold">Nội dung chi tiết:</label>
-                {{! CKEditor sẽ thay thế textarea này, id="Content" phải khớp với script bên dưới !}}
                 <textarea asp-for="Content" class="form-control" rows="10"></textarea>
                 <span asp-validation-for="Content" class="text-danger small"></span>
             </div>
 
+            @* ĐÃ SỬA: Đổi từ nhập URL sang upload ảnh *@
             <div class="mb-3">
-                <label class="form-label fw-bold">Đường dẫn ảnh (URL):</label>
-                <input asp-for="ImageUrl" class="form-control"
-                       placeholder="https://..." />
+                <label class="form-label fw-bold">Ảnh bài viết:</label>
+                <input type="file" name="ImageFile" class="form-control"
+                       accept="image/*" onchange="previewImage(this)" />
+                <div class="mt-2">
+                    <img id="preview" src="#" alt="Xem trước ảnh"
+                         style="max-height:200px; display:none; border-radius:8px;" />
+                </div>
             </div>
 
             <div class="mb-3">
@@ -57,29 +58,34 @@
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger small"></span>
             </div>
-
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-success">
                     <i class="bi bi-save"></i> Lưu vào hệ thống
                 </button>
                 <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
             </div>
-
         </form>
     </div>
 </div>
-
 @section Scripts {
-        {{! Load thư viện CKEditor 5 từ CDN !}}
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
     <script>
-        // Kích hoạt CKEditor cho textarea có id="Content"
-        // asp-for="Content" tự sinh ra id="Content" nên khớp chính xác
         ClassicEditor
             .create(document.querySelector('#Content'))
-            .catch(error => {
-                console.error(error); // In lỗi ra console nếu CKEditor không khởi động được
+            .catch(function(error) {
+                console.error(error);
             });
+
+        function previewImage(input) {
+            var preview = document.getElementById('preview');
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 }

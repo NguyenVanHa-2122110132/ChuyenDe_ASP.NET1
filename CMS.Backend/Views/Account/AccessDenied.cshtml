@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Không có quyền truy cập";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #fff;
+    }
+
+    .page_403 {
+        padding: 40px 0;
+        background: #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container_403 {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .four_zero_four_bg {
+        background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+        .four_zero_four_bg h1 {
+            font-size: 80px;
+            margin-top: 0;
+            font-weight: 700;
+            color: #dc3545;
+        }
+
+    .contant_box_403 {
+        margin-top: -50px;
+        text-align: center;
+    }
+
+        .contant_box_403 h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        .contant_box_403 p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+    .link_403 {
+        color: #fff !important;
+        padding: 10px 20px;
+        background: #0d6efd;
+        margin: 20px 0;
+        display: inline-block;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+
+        .link_403:hover {
+            background: #0b5ed7;
+        }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<section class="page_403">
+    <div class="container_403">
+        <div class="four_zero_four_bg">
+            <h1 class="text-center">403</h1>
+        </div>
+        <div class="contant_box_403">
+            <h3>Bạn không có quyền truy cập trang này!</h3>
+            <p>Chỉ tài khoản <strong>Administrator</strong> mới được vào khu vực này.</p>
+            <a asp-controller="Home" asp-action="Index" class="link_403">
+                ← Quay về trang chính
+            </a>
+        </div>
+    </div>
+</section>

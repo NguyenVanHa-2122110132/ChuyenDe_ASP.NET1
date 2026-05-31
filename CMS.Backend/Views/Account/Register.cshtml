@@ -1,0 +1,305 @@
+﻿@*
+    Họ và tên: Nguyễn Văn Hà
+    MSSV     : 2122110132
+    Lớp      : CCQ2211D
+    Ngày tạo : 17/05/2026
+    Mô tả    : Trang đăng ký tài khoản khách hàng
+              - Nhận thông tin: Họ tên, Email, Tên đăng nhập, Mật khẩu
+              - Gửi POST request đến AccountController (action Register)
+              - Hiển thị thông báo lỗi nếu tên đăng nhập đã tồn tại
+              - Hiển thị thông báo thành công sau khi đăng ký xong
+              - Email dùng để lấy lại mật khẩu sau này
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cyan: #00f5ff;
+            --pink: #ff2d78;
+            --dark: #0d0d0f;
+            --card-bg: #111116;
+            --inner-bg: #0a0a0d;
+            --angle: 0deg;
+            --spin-speed: 3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Rajdhani', sans-serif;
+            overflow: hidden;
+        }
+
+            body::before {
+                content: '';
+                position: fixed;
+                inset: 0;
+                background-image: linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px);
+                background-size: 40px 40px;
+                pointer-events: none;
+            }
+
+        .card-wrap {
+            position: relative;
+            width: 420px;
+            padding: 3px;
+            border-radius: 20px;
+        }
+
+            .card-wrap::before {
+                content: '';
+                position: absolute;
+                inset: -2px;
+                border-radius: 22px;
+                background: repeating-conic-gradient(from var(--angle), var(--pink) 0%, var(--pink) 5%, transparent 5%, transparent 40%, var(--cyan) 50%);
+                filter: drop-shadow(0 0 18px rgba(255,45,120,0.5)) drop-shadow(0 0 35px rgba(0,245,255,0.3));
+                animation: spin var(--spin-speed) linear infinite;
+                z-index: 0;
+            }
+
+            .card-wrap::after {
+                content: '';
+                position: absolute;
+                inset: -4px;
+                border-radius: 24px;
+                background: repeating-conic-gradient(from var(--angle), var(--pink) 0%, var(--pink) 5%, transparent 5%, transparent 40%, var(--cyan) 50%);
+                filter: blur(14px);
+                opacity: 0.5;
+                animation: spin var(--spin-speed) linear infinite;
+                z-index: 0;
+            }
+
+        @@property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @@keyframes spin {
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .card-inner {
+            background: var(--inner-bg);
+            border-radius: 12px;
+            padding: 36px 36px 30px;
+        }
+
+        .system-title {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+            .system-title h4 {
+                font-family: 'Orbitron', sans-serif;
+                color: var(--pink);
+                font-size: 14px;
+                letter-spacing: 3px;
+                text-shadow: 0 0 10px rgba(255,45,120,0.5);
+            }
+
+            .system-title p {
+                color: rgba(255,255,255,0.3);
+                font-size: 12px;
+                letter-spacing: 1px;
+                margin-top: 4px;
+            }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+            .input-group input {
+                width: 100%;
+                background: transparent;
+                border: 1.5px solid rgba(255,255,255,0.15);
+                border-radius: 50px;
+                padding: 14px 22px;
+                color: rgba(255,255,255,0.7);
+                font-family: 'Rajdhani', sans-serif;
+                font-size: 15px;
+                letter-spacing: 1px;
+                outline: none;
+                transition: border-color 0.3s, box-shadow 0.3s;
+            }
+
+                .input-group input::placeholder {
+                    color: rgba(255,255,255,0.35);
+                }
+
+                .input-group input:focus {
+                    border-color: var(--pink);
+                    box-shadow: 0 0 0 2px rgba(255,45,120,0.1);
+                }
+
+        .alert-error {
+            background: rgba(255,45,120,0.1);
+            border: 1px solid rgba(255,45,120,0.3);
+            border-radius: 8px;
+            padding: 10px 16px;
+            color: var(--pink);
+            font-size: 13px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .alert-success {
+            background: rgba(0,245,255,0.1);
+            border: 1px solid rgba(0,245,255,0.3);
+            border-radius: 8px;
+            padding: 10px 16px;
+            color: var(--cyan);
+            font-size: 13px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 15px;
+            margin-top: 4px;
+            background: var(--pink);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 0 20px rgba(255,45,120,0.4);
+        }
+
+            .btn-register:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 0 30px rgba(255,45,120,0.6);
+            }
+
+        .btn-login {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 12px;
+            background: transparent;
+            border: 1.5px solid var(--cyan);
+            border-radius: 50px;
+            color: var(--cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+            .btn-login:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 0 30px rgba(0,245,255,0.5);
+                color: var(--cyan);
+            }
+
+        .divider {
+            height: 1px;
+            background: rgba(255,255,255,0.07);
+            margin: 18px 0 0;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 18px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+            gap: 6px;
+        }
+
+            .form-footer span {
+                color: var(--pink);
+                text-shadow: 0 0 8px rgba(255,45,120,0.4);
+            }
+    </style>
+</head>
+<body>
+    <div class="card-wrap">
+        <div class="card">
+            <div class="card-inner">
+                <div class="system-title">
+                    <h4>⬡ ĐĂNG KÝ TÀI KHOẢN ⬡</h4>
+                    <p>MAI TRINH MOBILE</p>
+                </div>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert-error">⚠ @ViewBag.Error</div>
+                }
+                @if (ViewBag.Success != null)
+                {
+                    <div class="alert-success">✅ @ViewBag.Success</div>
+                }
+
+                <form asp-action="Register" method="post">
+                    @* Họ và tên đầy đủ *@
+                    <div class="input-group">
+                        <input type="text" name="fullname" placeholder="Họ và tên" autocomplete="off" required />
+                    </div>
+
+                    @* Email để lấy lại mật khẩu sau này *@
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Gmail / Email" autocomplete="off" required />
+                    </div>
+
+                    @* Tên đăng nhập duy nhất trong hệ thống *@
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Tên đăng nhập" autocomplete="off" required />
+                    </div>
+
+                    @* Mật khẩu sẽ được mã hóa trước khi lưu *@
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Mật khẩu" autocomplete="off" required />
+                    </div>
+
+                    <button type="submit" class="btn-register">ĐĂNG KÝ</button>
+                    <a href="/Account/Login" class="btn-login">← QUAY LẠI ĐĂNG NHẬP</a>
+                </form>
+
+                <div class="divider"></div>
+                <div class="form-footer">
+                    <span>♥</span> MAI TRINH MOBILE — 2026 <span>♥</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
