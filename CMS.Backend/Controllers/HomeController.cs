@@ -45,7 +45,7 @@ namespace CMS.Backend.Controllers
         {
             ViewBag.TotalCategories = _context.Categories.Count(); // Đếm tổng số danh mục
             ViewBag.TotalPosts = _context.Posts.Count();           // Đếm tổng số bài viết
-            ViewBag.TotalUsers = _context.Users.Count();           // Đếm tổng số thành viên
+            ViewBag.TotalCustomers = _context.Customers.Count();       // Đếm tổng số khách hàng
             return View();
         }
 
@@ -57,6 +57,27 @@ namespace CMS.Backend.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        // ========== ACTION CỬA HÀNG (SHOP) - CÔNG KHAI ==========
+        // Tuyến đường xử lý: /Home/Shop hoặc /Home/Shop?categoryId=1032
+        public IActionResult Shop(int? categoryId)
+        {
+            // 1. Khởi tạo câu lệnh truy vấn cơ bản: Lấy sản phẩm kèm theo bảng danh mục liên kết
+            var query = _context.Products
+                .Include(p => p.CategoryProducts)
+                .AsQueryable();
+
+            // 2. Nếu trên URL có truyền categoryId (Ví dụ: ?categoryId=1032) thì tiến hành lọc dữ liệu
+            if (categoryId.HasValue)
+            {
+                query = query.Where(p => p.CategoryProducts.Any(cp => cp.CategoryId == categoryId.Value));
+            }
+
+            // 3. Thực thi câu lệnh, chuyển dữ liệu thành danh sách (List)
+            var products = query.ToList();
+
+            // 4. Trả về file giao diện Shop.cshtml kèm theo danh sách sản phẩm đã lọc
+            return View(products);
         }
     }
 }

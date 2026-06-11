@@ -17,7 +17,12 @@
         <h2 class="text-dark fw-bold">
             <i class="bi bi-person-badge-fill text-primary"></i> QUẢN LÝ KHÁCH HÀNG
         </h2>
-        <span class="badge bg-primary fs-6 px-3 py-2">Tổng số khách: @Model.Count()</span>
+        <div class="d-flex gap-2 align-items-center">
+            <a href="/Post" class="btn btn-secondary">
+                <i class="bi bi-arrow-left-circle-fill me-1"></i> Quay lại Bài viết
+            </a>
+            <span class="badge bg-primary fs-6 px-3 py-2">Tổng số khách: @Model.Count()</span>
+        </div>
     </div>
     <!-- Bảng danh sách khách hàng -->
     <div class="card shadow-sm border-0 rounded-3 overflow-hidden">

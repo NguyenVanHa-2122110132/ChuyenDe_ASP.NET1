@@ -35,7 +35,11 @@ namespace CMS.Data.Entities
 
         [Required]
         public string? Password { get; set; } // Mật khẩu đăng nhập, bắt buộc nhập
+        public virtual ICollection<Order>? Orders { get; set; }// danh sách đơn hàng của khách hàng
+        public virtual ICollection<Comment>? Comments { get; set; }      
+        public virtual ICollection<Review>? Reviews { get; set; }       
+        public virtual ICollection<Wishlist>? Wishlists { get; set; }    
+        public virtual ICollection<CouponUsage>? CouponUsages { get; set; } 
 
-        public virtual ICollection<Order>? Orders { get; set; } // Danh sách đơn hàng của khách hàng
     }
 }

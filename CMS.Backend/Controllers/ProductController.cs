@@ -33,7 +33,10 @@ namespace CMS.Backend.Controllers
         [Authorize(Roles = "Administrator,Admin,Sales,Cashier,Warehouse,Shipper")]
         public IActionResult Index()
         {
-            var products = _context.Products.ToList();
+            var products = _context.Products
+                .Include(p => p.CategoryProducts)
+                    .ThenInclude(cp => cp.Category)
+                .ToList();
             return View(products);
         }
 
@@ -156,5 +159,34 @@ namespace CMS.Backend.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // ========== API/ACTION LẤY DANH SÁCH SIZE THEO DANH MỤC ==========
+        // Hàm này giúp trang giao diện gọi lấy danh sách size chuẩn theo từng loại ngành hàng
+        [HttpGet]
+        public IActionResult GetSizesByCategory(int categoryId)
+        {
+            // 1. Tìm tất cả sản phẩm thuộc danh mục được truyền vào thông qua bảng trung gian CategoryProducts
+            var rawSizes = _context.Products
+                .Include(p => p.CategoryProducts)
+                .Where(p => p.CategoryProducts.Any(cp => cp.CategoryId == categoryId))
+                .Select(p => p.Sizes)
+                .Where(s => !string.IsNullOrEmpty(s)) // Bỏ qua sản phẩm không nhập size
+                .ToList();
+
+            // 2. Tiến hành bóc tách chuỗi gộp (ví dụ: "10ml, 50ml, 100ml") thành các ô đơn lẻ
+            var finalSizes = rawSizes
+                .SelectMany(s => s.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                .Select(s => s.Trim()) // Xóa khoảng trắng thừa 2 đầu
+                .Distinct()            // Lọc trùng (Chỉ giữ lại 1 chữ 100ml, 1 chữ 50ml...)
+                .OrderBy(s => s)       // Sắp xếp lại theo thứ tự ABC
+                .ToList();
+
+            return Json(finalSizes);
+        }
+
+
+
+
+
     }
 }

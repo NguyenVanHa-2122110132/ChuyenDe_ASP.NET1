@@ -2,12 +2,12 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 23/05/2026
-    Mô tả    : Trang chủ - Banner, Features và hiển thị bài viết mới nhất
+    Ngày sửa : 08/06/2026
+    Mô tả    : Trang chủ - Banner, Thanh danh mục nhanh và Tin tức Thời trang & Nước hoa
 *@
 @model IEnumerable<CMS.Data.Entities.Post>
 @{
-    ViewData["Title"] = "Trang chủ";
+    ViewData["Title"] = "Trang chủ - Mai Trinh Store";
 }
 
 <style>
@@ -25,7 +25,7 @@
         }
 
         .product-card img {
-            height: 200px;
+            height: 240px;
             object-fit: cover;
             width: 100%;
             transition: transform 0.3s ease;
@@ -41,12 +41,6 @@
         border-radius: 20px;
     }
 
-    .price-tag {
-        color: #e31837;
-        font-size: 18px;
-        font-weight: 700;
-    }
-
     .section-title {
         position: relative;
         display: inline-block;
@@ -60,11 +54,11 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: #e31837;
+            background: #222222; /* Đổi sang màu đen sang trọng hợp thời trang */
         }
 
     .flash-sale-banner {
-        background: linear-gradient(135deg, #e31837, #ff6b35);
+        background: linear-gradient(135deg, #111111, #e31837);
         color: white;
         padding: 8px 20px;
         border-radius: 8px;
@@ -99,85 +93,81 @@
         }
 
     .hero-banner {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        /* Đổi màu banner sang phong cách Boutique huyền bí, sang trọng */
+        background: linear-gradient(135deg, #0f0c20 0%, #15102a 50%, #241a42 100%);
         color: white;
-        padding: 60px 0;
+        padding: 70px 0;
         border-radius: 16px;
         margin-bottom: 30px;
     }
 </style>
 
-<!-- PHẦN 1: HERO BANNER -->
 <div class="hero-banner text-center mb-4">
     <div class="container">
         <div class="mb-3">
             <span class="flash-sale-banner">
-                🔥 THỨ BA - SALE SẬP SÀN - GIẢM ĐẾN 50%
+                🔥 MID-SEASON SALE - GIẢM ĐẾN 50% BỘ SƯU TẬP HÈ
             </span>
         </div>
         <h1 class="display-4 fw-bold text-white mt-3">
-            <i class="bi bi-phone-vibrate text-danger"></i>
-            MAI TRINH MOBILE
+            <i class="bi bi-gem text-warning"></i>
+            MAI TRINH STORE
         </h1>
         <p class="fs-5 text-white-50 col-md-8 mx-auto mt-2">
-            Thiên đường điện thoại công nghệ cao cấp. Cập nhật những mẫu smartphone
-            mới nhất, chính hãng với giá ưu đãi nhất 2026.
+            Thiên đường Thời trang xu hướng và Nước hoa chính hãng cao cấp.
+            Nâng tầm phong cách và khẳng định khí chất quý ông cùng Mai Trinh Store 2026.
         </p>
         <div class="mt-4">
-            <a href="/Product" class="btn btn-danger btn-lg px-5 me-3 shadow">
-                <i class="bi bi-bag-check-fill"></i> Mua ngay
+            <a href="/Product" class="btn btn-light btn-lg px-5 me-3 shadow fw-bold text-dark">
+                <i class="bi bi-bag-check-fill text-danger"></i> Khám phá ngay
             </a>
             <a href="/Category" class="btn btn-outline-light btn-lg px-4">
-                <i class="bi bi-list-ul"></i> Xem danh mục
+                <i class="bi bi-grid-3x3-gap"></i> Bộ sưu tập
             </a>
         </div>
     </div>
 </div>
 
-<!-- PHẦN 2: THANH DANH MỤC NHANH -->
 <div class="container mb-4">
     <div class="d-flex gap-2 flex-wrap justify-content-center">
-        <a href="/Product" class="btn btn-outline-danger rounded-pill px-4">📱 Điện thoại</a>
-        <a href="/Category" class="btn btn-outline-secondary rounded-pill px-4">🍎 Apple</a>
-        <a href="/Category" class="btn btn-outline-secondary rounded-pill px-4">📟 Samsung</a>
-        <a href="/Category" class="btn btn-outline-secondary rounded-pill px-4">🔷 Xiaomi</a>
-        <a href="/Category" class="btn btn-outline-secondary rounded-pill px-4">🟢 Oppo</a>
-        <a href="/Category" class="btn btn-outline-secondary rounded-pill px-4">🔵 Vivo</a>
+        <a href="/Product" class="btn btn-dark rounded-pill px-4">✨ Tất cả sản phẩm</a>
+        <a href="/Product?categoryId=1001" class="btn btn-outline-secondary rounded-pill px-4">👕 Thời trang Nam</a>
+        <a href="/Product?categoryId=1002" class="btn btn-outline-secondary rounded-pill px-4">👗 Thời trang Nữ</a>
+        <a href="/Product?categoryId=1032" class="btn btn-outline-secondary rounded-pill px-4">👑 Nước hoa Nam</a>
+        <a href="/Product?categoryId=1033" class="btn btn-outline-secondary rounded-pill px-4">💖 Nước hoa Nữ</a>
     </div>
 </div>
 
-<!-- PHẦN 3: TÍNH NĂNG NỔI BẬT -->
 <div class="container mb-5">
     <div class="row g-3">
         <div class="col-md-4">
             <div class="feature-box bg-dark text-white h-100">
-                <i class="bi bi-shield-check display-5 text-warning"></i>
-                <h5 class="mt-3 fw-bold">Chính hãng 100%</h5>
-                <p class="text-white-50 small">Cam kết nguyên seal, đầy đủ phụ kiện và bảo hành chính hãng.</p>
+                <i class="bi bi-patch-check display-5 text-warning"></i>
+                <h5 class="mt-3 fw-bold">Authentic 100%</h5>
+                <p class="text-white-50 small">Cam kết nước hoa chính hãng, thời trang thiết kế chất liệu cao cấp.</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="feature-box bg-light border h-100">
-                <i class="bi bi-truck display-5 text-primary"></i>
-                <h5 class="mt-3 fw-bold">Giao hàng siêu tốc</h5>
-                <p class="text-muted small">Nhận hàng trong 2h nội thành, miễn phí vận chuyển trên 5 triệu.</p>
+                <i class="bi bi-arrow-left-right display-5 text-dark"></i>
+                <h5 class="mt-3 fw-bold">Đổi trả dễ dàng</h5>
+                <p class="text-muted small">Hỗ trợ đổi size thời trang trong vòng 7 ngày kể từ khi nhận hàng.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="feature-box bg-danger text-white h-100">
-                <i class="bi bi-headset display-5"></i>
-                <h5 class="mt-3 fw-bold">Hỗ trợ 24/7</h5>
-                <p class="small" style="opacity:0.8">Tư vấn viên luôn sẵn sàng giải đáp mọi thắc mắc.</p>
+            <div class="feature-box bg-secondary text-white h-100" style="background-color: #2c3e50 !important;">
+                <i class="bi bi-truck display-5 text-info"></i>
+                <h5 class="mt-3 fw-bold">Giao hàng Toàn Quốc</h5>
+                <p class="small" style="opacity:0.8">Miễn phí vận chuyển cho mọi đơn hàng nước hoa full size.</p>
             </div>
         </div>
     </div>
 </div>
 
-<!-- PHẦN 4: TIN TỨC MỚI NHẤT -->
 <div class="container mb-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h4 class="fw-bold section-title">⚡ TIN TỨC MỚI NHẤT</h4>
-        <a href="/Post" class="btn btn-outline-danger btn-sm">Xem tất cả →</a>
+        <h4 class="fw-bold section-title">📰 XU HƯỚNG & TIN TỨC BẢO ĐỒNG</h4>
+        <a href="/Post" class="btn btn-outline-dark btn-sm">Xem tất cả →</a>
     </div>
     <div class="row g-3">
         @foreach (var item in Model)
@@ -189,17 +179,17 @@
                 <div class="product-card h-100">
                     <div class="position-relative overflow-hidden">
                         <img src="@item.ImageUrl" alt="@item.Title">
-                        <span class="position-absolute top-0 start-0 m-2 badge bg-danger badge-category">
+                        <span class="position-absolute top-0 start-0 m-2 badge bg-dark badge-category">
                             @item.Category?.Name
                         </span>
                     </div>
                     <div class="p-3">
-                        <h6 class="fw-bold mb-1" style="line-height:1.4">@item.Title</h6>
+                        <h6 class="fw-bold mb-1" style="line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden">@item.Title</h6>
                         <p class="text-muted small mb-2" style="
-                                display:-webkit-box;
-                                -webkit-line-clamp:2;
-                                -webkit-box-orient:vertical;
-                                overflow:hidden">
+                                    display:-webkit-box;
+                                    -webkit-line-clamp:2;
+                                    -webkit-box-orient:vertical;
+                                    overflow:hidden">
                             @plainText
                         </p>
                         <div class="d-flex justify-content-between align-items-center mt-2">
@@ -207,8 +197,8 @@
                                 <i class="bi bi-calendar3"></i>
                                 @item.CreatedDate.ToString("dd/MM/yyyy")
                             </small>
-                            <a href="/Post/Details/@item.Id" class="btn btn-danger btn-sm px-3">
-                                Xem
+                            <a href="/Post/Details/@item.Id" class="btn btn-dark btn-sm px-3">
+                                Đọc bài
                             </a>
                         </div>
                     </div>

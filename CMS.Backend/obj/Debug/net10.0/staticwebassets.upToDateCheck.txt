@@ -47,6 +47,7 @@ D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\boo
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\jquery-validation\dist\additional-methods.js
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\js\ckeditor.js
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
@@ -62,15 +63,9 @@ D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\boo
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\images\3f875f0c-1f2d-465e-9c2d-a1cd741a9f3c.jpeg
-wwwroot\images\4a0af29d-c067-4cea-91e6-a5c69a66face.jpeg
-wwwroot\images\970561046.jpeg
-wwwroot\images\anh3.jpg
-wwwroot\images\ip14.webp
-wwwroot\images\ip15.jpg
-wwwroot\images\ip16.jpg
-wwwroot\images\ip17.webp
-wwwroot\images\s25.jpg
+wwwroot\images\1.png
+wwwroot\images\z7603827959331_12696e9ab9747ab96e9d330f94ac026c.jpg
+wwwroot\js\ckeditor.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\LICENSE
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css

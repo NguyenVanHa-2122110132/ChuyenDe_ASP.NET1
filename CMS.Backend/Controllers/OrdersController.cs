@@ -2,64 +2,128 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 17/05/2026
-    Mô tả    : API Controller quản lý Đơn hàng (OrdersController)
-              - CreateOrder() : Tiếp nhận đơn đặt hàng từ FrontEnd gửi lên qua [HttpPost]
-                                Tự động gán ngày đặt hàng và trạng thái mặc định là 0 (Chờ xử lý)
-                                Trả về 201 Created kèm mã Id đơn hàng vừa tạo
+    Ngày tạo : 09/06/2026
+    Mô tả    : API Controller Đơn hàng (OrdersController) - Phiên bản hoàn chỉnh
+              - CreateOrder() : Tiếp nhận đơn hàng từ Checkout.jsx
+                                Lưu Order + OrderDetails
+                                Trừ tồn kho (Stock) từng sản phẩm
+                                Gửi email xác nhận cho khách hàng
+                                Trả về 201 Created kèm orderId
 */
 using CMS.Data;
 using CMS.Data.Entities;
+using CMS.Backend.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Backend.Controllers
 {
-    // Định nghĩa đường dẫn API: https://localhost:xxxx/api/Orders
     [Route("api/[controller]")]
-
-    // Kích hoạt tính năng tự động kiểm tra dữ liệu đầu vào
     [ApiController]
-
-    // Kế thừa ControllerBase để tối ưu bộ nhớ cho API thuần JSON
     public class OrdersController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IEmailService _emailService;
 
-        // Hàm khởi tạo: Tiêm ngữ cảnh dữ liệu SQL Server vào Controller thông qua DI
-        public OrdersController(ApplicationDbContext context)
+        public OrdersController(ApplicationDbContext context, IEmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
-        // API: Tiếp nhận đơn đặt hàng từ giỏ hàng FrontEnd gửi lên
-        // Đường dẫn: POST https://localhost:xxxx/api/Orders
+        // POST api/orders
         [HttpPost]
         public async Task<IActionResult> CreateOrder([FromBody] OrderInputDTO input)
         {
-            // Kiểm tra dữ liệu truyền lên có hợp lệ không
-            if (input == null)
+            if (input == null || input.Items == null || input.Items.Count == 0)
+                return BadRequest(new { message = "Dữ liệu đơn hàng không hợp lệ." });
+
+            // ── Bước 1: Tìm hoặc tạo Customer ──
+            var customer = await _context.Customers
+                .FirstOrDefaultAsync(c => c.Email == input.Email);
+
+            if (customer == null)
             {
-                return BadRequest(new { message = "Dữ liệu đơn hàng không hợp lệ" });
+                // Khách chưa có tài khoản → tạo bản ghi tạm
+                customer = new Customer
+                {
+                    FullName = input.FullName,
+                    Email = input.Email ?? $"guest_{DateTime.Now.Ticks}@guest.com",
+                    Phone = input.Phone,
+                    Address = input.Address,
+                    Password = "guest", // Không dùng để đăng nhập
+                };
+                _context.Customers.Add(customer);
+                await _context.SaveChangesAsync();
+            }
+
+            // ── Bước 2: Kiểm tra tồn kho trước khi tạo đơn ──
+            foreach (var item in input.Items)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                if (product == null)
+                    return BadRequest(new { message = $"Sản phẩm ID {item.ProductId} không tồn tại." });
+
+                if (product.Stock < item.Quantity)
+                    return BadRequest(new
+                    {
+                        message = $"Sản phẩm '{product.Name}' chỉ còn {product.Stock} trong kho!"
+                    });
             }
 
             try
             {
-                // Bước A: Khởi tạo đối tượng đơn hàng mới
+                // ── Bước 3: Tạo đơn hàng ──
                 var newOrder = new Order
                 {
-                    OrderDate = DateTime.Now, // Tự động lấy ngày giờ thực tế lúc đặt hàng
-                    CustomerId = input.CustomerId,
-                    Status = 0,               // 0: Trạng thái mặc định "Chờ xử lý"
-                    Notes = input.Notes
+                    OrderDate = DateTime.Now,
+                    CustomerId = customer.Id,
+                    Status = 0, // 0 = Chờ xử lý
+                    Notes = $"Giao đến: {input.Address} | SĐT: {input.Phone}" +
+                            (string.IsNullOrEmpty(input.Notes) ? "" : $" | {input.Notes}"),
                 };
-
-                // Bước B: Thêm vào bảng tạm và lưu xuống SQL Server
                 _context.Orders.Add(newOrder);
-                await _context.SaveChangesAsync(); // Sinh ra mã Id đơn hàng tự động tăng
+                await _context.SaveChangesAsync(); // Sinh OrderId
 
-                // Bước C: Trả về mã 201 Created kèm Id đơn hàng vừa tạo
+                // ── Bước 4: Lưu OrderDetails + trừ tồn kho ──
+                foreach (var item in input.Items)
+                {
+                    var product = await _context.Products.FindAsync(item.ProductId);
+
+                    // Lưu chi tiết đơn hàng
+                    _context.OrderDetails.Add(new OrderDetail
+                    {
+                        OrderId = newOrder.Id,
+                        ProductId = item.ProductId,
+                        Quantity = item.Quantity,
+                        UnitPrice = item.UnitPrice,
+                    });
+
+                    // Trừ tồn kho
+                    product!.Stock -= item.Quantity;
+                }
+
+                await _context.SaveChangesAsync();
+
+                // ── Bước 5: Gửi email xác nhận ──
+                if (!string.IsNullOrEmpty(customer.Email) &&
+                    !customer.Email.Contains("@guest.com"))
+                {
+                    try
+                    {
+                        await _emailService.SendOrderConfirmEmailAsync(
+                            customer.Email,
+                            customer.FullName ?? input.FullName,
+                            newOrder.Id.ToString(),
+                            input.TotalAmount
+                        );
+                    }
+                    catch
+                    {
+                        // Không để lỗi email hủy đơn hàng
+                    }
+                }
+
                 return StatusCode(201, new
                 {
                     message = "Đặt hàng thành công!",
@@ -68,16 +132,32 @@ namespace CMS.Backend.Controllers
             }
             catch (Exception ex)
             {
-                // Trả về lỗi 500 nếu có sự cố kết nối hoặc lỗi logic
-                return StatusCode(500, new { message = "Lỗi xử lý tạo đơn hàng", detail = ex.Message });
+                return StatusCode(500, new
+                {
+                    message = "Lỗi xử lý đơn hàng.",
+                    detail = ex.Message
+                });
             }
         }
     }
 
-    // Lớp DTO trung gian để hứng dữ liệu từ FrontEnd truyền lên
+    // ── DTO ──
+    public class OrderItemDTO
+    {
+        public int ProductId { get; set; }
+        public string? ProductName { get; set; }
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+    }
+
     public class OrderInputDTO
     {
-        public int CustomerId { get; set; }  // Mã khách hàng đặt hàng
-        public string? Notes { get; set; }   // Ghi chú đơn hàng, cho phép null
+        public string FullName { get; set; } = "";
+        public string? Email { get; set; }
+        public string Phone { get; set; } = "";
+        public string Address { get; set; } = "";
+        public string? Notes { get; set; }
+        public List<OrderItemDTO> Items { get; set; } = new();
+        public decimal TotalAmount { get; set; }
     }
 }

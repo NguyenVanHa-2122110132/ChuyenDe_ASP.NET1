@@ -1,0 +1,2260 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\shop.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\services\\productservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\couponusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\couponusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\loginpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\components\\postlist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\blogpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\post\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\checkout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\cart.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\profilepage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\components\\productlist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\home\\shop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\components\\categoryproductlist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\components\\categorylist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\tagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\registerpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\otpcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\pages\\fashionpage.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\cms.backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\cms.backend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\cms.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\cms.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\postcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\components\\blogcategorylist.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\api\\productservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\api\\axiosclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\services\\blogservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\services\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\customer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\wishlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\wishlistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\wishlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\couponusagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\couponusagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\product\\indexadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\product\\indexadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\categoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\categoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\postcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\services\\categoryproductservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\categoriesproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categoriesproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\productimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\productimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\productimagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\shippingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\shippingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\ASP\\New folder\\Backend_ThoiTrang\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\assets\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\assets\\css\\elegant-icons.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\assets\\css\\owl.carousel.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\public\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59D48BB-F6E5-9F03-A7AA-9BB5DF39FE47}|D:\\ASP.NET\\Buoi1-2\\cms.frontend|d:\\asp.net\\buoi1-2\\cms.frontend\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\shipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\shipping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\shippingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\shippingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\couponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\couponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\posttagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\posttagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\productimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\posttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\posttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\postcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\postcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\couponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\couponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\coupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\post\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\productcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\productcategory\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\customer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\customer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\orderdetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\orderdetail\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\post\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\post\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\orderdetail\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\orderdetail\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\orderdetail\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\orderdetail\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\productcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\productcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0096E63-5207-411F-2649-837654E3C58A}|Database{E0096E63-5207-411F-2649-837654E3C58A}|D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\HaCMS_FullData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{E0096E63-5207-411F-2649-837654E3C58A}|Database{E0096E63-5207-411F-2649-837654E3C58A}|solutionrelative:HaCMS_FullData.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HaCMS_2122110132/True/SqlTable/dbo.Categories.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\migrations\\20260518111138_initialcreate_clean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\migrations\\20260518111138_initialcreate_clean.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.backend\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58EBADCC-DCCB-557C-6569-5E40C1C71057}|CMS.Backend\\CMS.Backend.csproj|solutionrelative:cms.backend\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\migrations\\20260528075319_addemailtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\migrations\\20260528075319_addemailtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|d:\\asp.net\\buoi1-2\\hacms_solution\\cms.data\\migrations\\20260603083508_addmissingcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF5FA73E-37CB-69E7-D6AD-2EDA2D28480F}|CMS.Data\\CMS.Data.csproj|solutionrelative:cms.data\\migrations\\20260603083508_addmissingcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Shop.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Shop.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\Shop.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Shop.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\Shop.jsx",
+              "ViewState": "AgIAAF0BAAAAAAAAAAAkwHABAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T06:57:33.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BlogPage.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\BlogPage.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\BlogPage.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\BlogPage.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\BlogPage.jsx",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T13:15:22.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PostList.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\PostList.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\components\\PostList.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\PostList.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\components\\PostList.jsx",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwFUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T07:34:09.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderDetailController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrderDetailController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrderDetailController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrderDetailController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\OrderDetailController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAYwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:29:19.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginPage.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\LoginPage.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\LoginPage.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\LoginPage.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\LoginPage.jsx",
+              "ViewState": "AgIAACEAAAAAAAAAAAApwCwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-04T16:42:36.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Couponusage.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Couponusage.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Couponusage.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Couponusage.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Couponusage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:36:14.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "productService.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\productService.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\services\\productService.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\productService.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\services\\productService.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T07:31:24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CMS.Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAuwEgAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T04:29:46.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Create.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Create.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T02:02:03.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Services\\EmailService.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Services\\EmailService.cs",
+              "RelativeToolTip": "CMS.Backend\\Services\\EmailService.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAgwI8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T01:32:20.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAkwKIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T11:38:26.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\App.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\App.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\App.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\App.js",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAIwEsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T06:18:16.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Checkout.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Checkout.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\Checkout.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Checkout.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\Checkout.jsx",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAkwCcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-09T11:10:46.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cart.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Cart.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\Cart.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\Cart.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\Cart.jsx",
+              "ViewState": "AgIAALwAAAAAAAAAAAAmwOIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-09T11:03:15.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAA5wP4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T11:13:38.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProfilePage.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\ProfilePage.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\ProfilePage.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\ProfilePage.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\ProfilePage.jsx",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwHsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-07T05:44:29.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": ".env.example",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\.env.example",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\.env.example",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\.env.example",
+              "RelativeToolTip": "..\\cms.frontend\\.env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-09T10:55:12.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwGUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T01:05:38.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductList.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\ProductList.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\components\\ProductList.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\ProductList.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\components\\ProductList.jsx",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAgwNEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T07:32:11.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthApiController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\AuthApiController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\AuthApiController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\AuthApiController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\AuthApiController.cs",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAwwP4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T03:13:05.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T04:53:47.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T09:23:17.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAADcBAAAAAAAAAAAkwE4BAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-25T16:59:29.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAADwv3wAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T11:59:53.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Shop.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Shop.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Home\\Shop.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Shop.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Home\\Shop.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAgwJ4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-08T14:06:04.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAgwL8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:57:46.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CategoryProductList.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\CategoryProductList.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\components\\CategoryProductList.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\CategoryProductList.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\components\\CategoryProductList.jsx",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAHwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T07:20:29.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CategoryList.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\CategoryList.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\components\\CategoryList.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\CategoryList.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\components\\CategoryList.jsx",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T06:16:28.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TagsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\TagsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\TagsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\TagsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\TagsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:36:10.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegisterPage.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\RegisterPage.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\RegisterPage.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\RegisterPage.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\RegisterPage.jsx",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAgwP8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-04T16:43:13.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OtpCode.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\OtpCode.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\OtpCode.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\OtpCode.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\OtpCode.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T01:39:28.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "CMS.Backend\\appsettings.json",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\appsettings.json",
+              "RelativeToolTip": "CMS.Backend\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-17T07:28:26.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Program.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Program.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Program.cs",
+              "RelativeToolTip": "CMS.Backend\\Program.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T08:03:07.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FashionPage.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\FashionPage.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\pages\\FashionPage.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\pages\\FashionPage.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\pages\\FashionPage.jsx",
+              "ViewState": "AgIAAOUBAAAAAAAAAAAAAOsBAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-03T06:29:03.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T17:12:49.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Cart.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Cart.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Cart.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Cart.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:33:49.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CMS.Data.csproj",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\CMS.Data.csproj",
+              "RelativeDocumentMoniker": "CMS.Data\\CMS.Data.csproj",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\CMS.Data.csproj",
+              "RelativeToolTip": "CMS.Data\\CMS.Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T09:13:10.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Post.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Post.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Post.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Post.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:18:00.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CMS.Backend.csproj",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\CMS.Backend.csproj",
+              "RelativeDocumentMoniker": "CMS.Backend\\CMS.Backend.csproj",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\CMS.Backend.csproj",
+              "RelativeToolTip": "CMS.Backend\\CMS.Backend.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-16T10:38:44.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PostCategoriesController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostCategoriesController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostCategoriesController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostCategoriesController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostCategoriesController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:35:35.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BlogCategoryList.jsx",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\BlogCategoryList.jsx",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\components\\BlogCategoryList.jsx",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\components\\BlogCategoryList.jsx",
+              "RelativeToolTip": "..\\cms.frontend\\src\\components\\BlogCategoryList.jsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-06-02T07:54:47.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "productService.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\api\\productService.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\api\\productService.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\api\\productService.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\api\\productService.js",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAACoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T07:07:48.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "axiosClient.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\api\\axiosClient.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\api\\axiosClient.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\api\\axiosClient.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\api\\axiosClient.js",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T07:07:01.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CouponUsageController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponUsageController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CouponUsageController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponUsageController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CouponUsageController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:40:33.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwGMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T04:15:13.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "blogService.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\blogService.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\services\\blogService.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\blogService.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\services\\blogService.js",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAACQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T07:32:59.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "api.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\api.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\services\\api.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\api.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\services\\api.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T06:06:00.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CustomerController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAYwJYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T12:55:12.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "WishlistsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\WishlistsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\WishlistsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\WishlistsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\WishlistsController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:33:00.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "WishlistController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\WishlistController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\WishlistController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\WishlistController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\WishlistController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:45:07.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ReviewController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ReviewController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:15:36.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Customer\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Customer\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Customer\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Customer\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T12:57:42.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Order\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T14:33:54.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Customer.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Customer.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:16:03.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Wishlist.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Wishlist.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Wishlist.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Wishlist.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Wishlist.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:40:50.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Review.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Review.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Review.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:39:55.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Comment.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Comment.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Comment.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Comment.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:44:42.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\User.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\User.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:19:07.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CMS.Backend\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CMS.Backend\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-04T14:38:05.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IndexAdmin.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\IndexAdmin.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\IndexAdmin.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\IndexAdmin.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\IndexAdmin.cshtml",
+              "ViewState": "AgIAAIQBAAAAAAAAAAAIwJQBAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-31T03:14:51.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Product.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Product.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Product.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAiwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:18:38.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Details.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T12:03:35.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "CategoryProduct.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\CategoryProduct.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\CategoryProduct.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\CategoryProduct.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\CategoryProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:15:22.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Home\\Dashboard.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Home\\Dashboard.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Home\\Dashboard.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAwD8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T01:46:34.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CartItemController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CartItemController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:43:23.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T02:31:53.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "PostCategoryController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostCategoryController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostCategoryController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostCategoryController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostCategoryController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAIsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:53:42.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T11:33:26.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "categoryProductService.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\categoryProductService.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\services\\categoryProductService.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\services\\categoryProductService.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\services\\categoryProductService.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T07:19:23.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T14:30:54.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "CategoriesProductsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoriesProductsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoriesProductsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoriesProductsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CategoriesProductsController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAA3wGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:25:53.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 141,
+              "Title": "20260603083508_AddMissingColumns.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260603083508_AddMissingColumns.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Migrations\\20260603083508_AddMissingColumns.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260603083508_AddMissingColumns.cs",
+              "RelativeToolTip": "CMS.Data\\Migrations\\20260603083508_AddMissingColumns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T08:35:08.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "Cartitem.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Cartitem.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Cartitem.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Cartitem.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Cartitem.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:37:40.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Category.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Category.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Category.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:14:02.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "ProductImageController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductImageController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductImageController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductImageController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductImageController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwIEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:50:40.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "ProductImagesController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductImagesController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductImagesController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductImagesController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductImagesController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:35:06.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "TagController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\TagController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\TagController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\TagController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\TagController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwH0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:55:54.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ShippingController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ShippingController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ShippingController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ShippingController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ShippingController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAG8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:46:57.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ReviewsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:30:30.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PaymentsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:34:17.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:48:47.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\ASP\\New folder\\Backend_ThoiTrang\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\ASP\\New folder\\Backend_ThoiTrang\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAiwPQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T08:22:27.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "index.js",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\index.js",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\index.js",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\index.js",
+              "RelativeToolTip": "..\\cms.frontend\\src\\index.js",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-02T08:32:58.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\assets\\css\\style.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\style.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\assets\\css\\style.css",
+              "ViewState": "AgIAAEgOAAAAAAAAAAAAwGEOAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-03T01:53:00.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "App.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\App.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\App.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\App.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\App.css",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-03T01:51:35.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\assets\\css\\bootstrap.min.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\bootstrap.min.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\assets\\css\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-03T01:51:57.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "elegant-icons.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\elegant-icons.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\assets\\css\\elegant-icons.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\elegant-icons.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\assets\\css\\elegant-icons.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-03T01:52:04.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "index.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\index.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\index.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\index.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-02T15:45:03.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "owl.carousel.min.css",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\owl.carousel.min.css",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\src\\assets\\css\\owl.carousel.min.css",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\src\\assets\\css\\owl.carousel.min.css",
+              "RelativeToolTip": "..\\cms.frontend\\src\\assets\\css\\owl.carousel.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-02T16:12:18.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\public\\index.html",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\public\\index.html",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\public\\index.html",
+              "RelativeToolTip": "..\\cms.frontend\\public\\index.html",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAB4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-06-02T07:14:37.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\InventoryController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\InventoryController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAJUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:33:21.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "package.json",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\package.json",
+              "RelativeDocumentMoniker": "..\\cms.frontend\\package.json",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\cms.frontend\\package.json",
+              "RelativeToolTip": "..\\cms.frontend\\package.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T06:01:28.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "InventoriesController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\InventoriesController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\InventoriesController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\InventoriesController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\InventoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:31:16.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "Shipping.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Shipping.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Shipping.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Shipping.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Shipping.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:39:09.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Inventory.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Inventory.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Inventory.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Inventory.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:42:36.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "ShippingsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ShippingsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ShippingsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ShippingsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ShippingsController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAkwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:33:45.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "CartsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CartsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CartsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:32:22.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "CouponsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CouponsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CouponsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAkwCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:31:53.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CommentsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CommentsController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:29:44.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CartController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CartController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:41:58.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "PostTagController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostTagController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostTagController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostTagController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostTagController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAIwGcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T17:01:14.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "Posttag.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Posttag.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Posttag.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Posttag.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Posttag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:44:00.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "Productimage.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Productimage.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Productimage.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Productimage.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Productimage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:41:39.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "Tag.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Tag.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Tag.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Tag.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Tag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:43:10.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "Postcategory.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Postcategory.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Postcategory.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Postcategory.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Postcategory.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA4wCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:45:49.577Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Payment.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Payment.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Payment.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:38:28.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "CouponController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CouponController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CouponController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CouponController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:38:56.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\OrderDetail.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\OrderDetail.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:17:21.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CommentController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CommentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T16:05:17.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "Coupon.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Coupon.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Coupon.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Coupon.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Coupon.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:37:01.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoryController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAwwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:54:32.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\CategoriesController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T03:31:35.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 114,
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostsController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostsController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T08:00:03.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 113,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Edit.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Edit.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T02:02:47.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwEwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-31T03:05:13.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\PostController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\PostController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\PostController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAKIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T11:30:08.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 115,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\ProductCategory\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\ProductCategory\\Create.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\ProductCategory\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\ProductCategory\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T08:49:48.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 116,
+              "Title": "ProductCategoryController.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductCategoryController.cs",
+              "RelativeDocumentMoniker": "CMS.Backend\\Controllers\\ProductCategoryController.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Controllers\\ProductCategoryController.cs",
+              "RelativeToolTip": "CMS.Backend\\Controllers\\ProductCategoryController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwEcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T08:28:11.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 117,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-28T08:09:43.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 118,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\User\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAF0AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-17T02:34:26.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 119,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwCYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T03:44:26.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 120,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAkwDABAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-27T06:26:59.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 140,
+              "Title": "20260528075319_AddEmailToUser.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260528075319_AddEmailToUser.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Migrations\\20260528075319_AddEmailToUser.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260528075319_AddEmailToUser.cs",
+              "RelativeToolTip": "CMS.Data\\Migrations\\20260528075319_AddEmailToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T07:53:20.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 121,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Customer\\Detail.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Customer\\Detail.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Customer\\Detail.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Customer\\Detail.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAowFoAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-27T07:19:21.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 122,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Category\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAAC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T10:04:53.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 123,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\User\\Create.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\User\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T02:05:21.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 124,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\User\\Edit.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T02:05:48.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 125,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwFkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T05:31:41.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 126,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\OrderDetail\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\OrderDetail\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwEYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T09:08:09.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 127,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\AccessDenied.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\AccessDenied.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T05:28:15.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 128,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Post\\Details.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Post\\Details.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Post\\Details.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwC4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-17T03:43:15.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 129,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Edit.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\OrderDetail\\Edit.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Edit.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\OrderDetail\\Edit.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwEAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T09:10:42.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 130,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\OrderDetail\\Create.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\OrderDetail\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\OrderDetail\\Create.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwD4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T09:09:59.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 131,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\ProductCategory\\Index.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\ProductCategory\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\ProductCategory\\Index.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\ProductCategory\\Index.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwDQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-24T08:47:54.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 132,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Entities\\Order.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Entities\\Order.cs",
+              "RelativeToolTip": "CMS.Data\\Entities\\Order.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T09:16:42.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 133,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Category\\Create.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwCQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-23T03:37:16.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 134,
+              "Title": "HaCMS_FullData.sql",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\HaCMS_FullData.sql",
+              "RelativeDocumentMoniker": "HaCMS_FullData.sql",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\HaCMS_FullData.sql",
+              "RelativeToolTip": "HaCMS_FullData.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-18T14:58:02.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 139,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\Order\\Details.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwEQAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-18T14:35:41.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 138,
+              "Title": "20260518111138_InitialCreate_Clean.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260518111138_InitialCreate_Clean.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Migrations\\20260518111138_InitialCreate_Clean.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260518111138_InitialCreate_Clean.cs",
+              "RelativeToolTip": "CMS.Data\\Migrations\\20260518111138_InitialCreate_Clean.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:11:38.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 135,
+              "Title": "20260518102012_Fix_Relationship_Final.cs",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs",
+              "RelativeDocumentMoniker": "CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs",
+              "RelativeToolTip": "CMS.Data\\Migrations\\20260518102012_Fix_Relationship_Final.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T10:20:13.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 136,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "CMS.Backend\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\ASP.NET\\Buoi1-2\\HaCMS_Solution\\CMS.Backend\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "CMS.Backend\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-16T11:04:50.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 137,
+              "Title": "dbo.Categories.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HaCMS_2122110132/True/SqlTable/dbo.Categories.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/HaCMS_2122110132/True/SqlTable/dbo.Categories.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-05-17T14:47:28.687Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

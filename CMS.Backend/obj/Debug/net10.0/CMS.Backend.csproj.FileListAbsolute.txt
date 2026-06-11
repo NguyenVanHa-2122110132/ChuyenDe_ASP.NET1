@@ -351,3 +351,5 @@ D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\obj\Debug\net10.0\CMS.Backend.MvcA
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\bin\Debug\net10.0\BouncyCastle.Cryptography.dll
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\bin\Debug\net10.0\MailKit.dll
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\bin\Debug\net10.0\MimeKit.dll
+D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\obj\Debug\net10.0\compressed\rkbv0qbumo-{0}-lw0pz7fhgn-lw0pz7fhgn.gz

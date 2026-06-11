@@ -2,63 +2,124 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 18/05/2026
-    Mô tả    : Giao diện danh sách sản phẩm điện thoại để bán (Product Index)
-              - Hiển thị danh sách sản phẩm dưới dạng Card thương mại điện tử
-              - Có giá tiền định dạng VNĐ, nút thêm vào giỏ hàng
+    Ngày tạo : 04/06/2026
+    Mô tả    : Giao diện quản lý danh sách sản phẩm (Admin)
+              - Hiển thị dạng bảng admin chuyên nghiệp
+              - Có nút Thêm mới, Sửa, Xóa
               - File nằm tại: Views/Product/Index.cshtml
 *@
-
 @model IEnumerable<CMS.Data.Entities.Product>
-
 @{
-    ViewData["Title"] = "Cửa hàng điện thoại";
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Quản lý sản phẩm";
 }
 
-<div class="container mt-4">
-    <!-- Tiêu đề trang trí đẹp mắt -->
-    <div class="text-center mb-5">
-        <h2 class="text-danger fw-bold display-5">
-            <i class="bi bi-phone-vibrate-fill"></i> SIÊU THỊ ĐIỆN THOẠI MAI TRINH
-        </h2>
-        <p class="text-muted fs-5">Cam kết chính hãng - Trả góp 0% - Giao hàng nhanh 2h</p>
-    </div>
-
-    <!-- Danh sách sản phẩm dạng Grid Card -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        @foreach (var item in Model)
-        {
-            <div class="col">
-                <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
-                    <!-- Ảnh sản phẩm cố định khung, không lo lệch card -->
-                    <div class="text-center p-3 bg-light" style="height: 250px;">
-                        <img src="@item.ImageUrl" class="img-fluid h-100" alt="@item.Name" style="object-fit: contain;">
-                    </div>
-
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold text-dark mb-2">@item.Name</h5>
-                        <p class="card-text text-muted small text-truncate mb-3">@item.Description</p>
-
-                        <!-- Hiển thị giá tiền dạng VNĐ màu đỏ nổi bật -->
-                        <div class="mt-auto">
-                            <h4 class="text-danger fw-bold mb-3">
-                                @item.Price.ToString("N0") <small class="fs-6">VNĐ</small>
-                            </h4>
-                            <div class="d-grid gap-2">
-                                <a href="/Product/Details/@item.Id" class="btn btn-outline-secondary btn-sm">
-                                    <i class="bi bi-info-circle"></i> Thông số kỹ thuật
-                                </a>
-                                <button class="btn btn-danger btn-sm">
-                                    <i class="bi bi-cart-plus-fill"></i> Mua ngay
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold text-dark">
+        <i class="bi bi-box-seam-fill text-primary"></i> QUẢN LÝ SẢN PHẨM
+    </h2>
+    <div class="d-flex gap-2 align-items-center">
+        <span class="badge bg-primary fs-6 px-3 py-2">Tổng: @Model.Count() sản phẩm</span>
+        <a href="/Product/Create" class="btn btn-success">
+            <i class="bi bi-plus-circle-fill"></i> Thêm sản phẩm
+        </a>
     </div>
 </div>
 
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+    <div class="card-body p-0">
+        <table class="table table-hover table-striped mb-0 align-middle text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th width="5%">ID</th>
+                    <th width="8%">Ảnh</th>
+                    <th width="20%" class="text-start ps-3">Tên sản phẩm</th>
+                    <th width="17%" class="text-start">Mô tả</th>
+                    <th width="12%">Giá</th>
+                    <th width="10%">Tồn kho</th>
+                    <th width="10%">Kích thước</th>
+                    <th width="10%">Danh mục</th>
+                    <th width="10%">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="fw-bold text-muted">@item.Id</td>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImageUrl))
+                            {
+                                <img src="@item.ImageUrl" alt="@item.Name"
+                                     style="width:50px; height:50px; object-fit:cover;"
+                                     class="rounded shadow-sm">
+                            }
+                            else
+                            {
+                                <i class="bi bi-image text-muted fs-4"></i>
+                            }
+                        </td>
+                        <td class="text-start ps-3 fw-semibold">@item.Name</td>
+                        <td class="text-start text-muted small">
+                            <span title="@item.Description">
+                                @(item.Description?.Length > 50 ? item.Description.Substring(0, 50) + "..." : item.Description)
+                            </span>
+                        </td>
+                        <td class="text-danger fw-bold">
+                            @item.Price.ToString("N0") <small class="text-muted fw-normal">đ</small>
+                        </td>
+                        <td>
+                            @if (item.Stock <= 5)
+                            {
+                                <span class="badge bg-danger">@item.Stock</span>
+                            }
+                            else if (item.Stock <= 20)
+                            {
+                                <span class="badge bg-warning text-dark">@item.Stock</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-success">@item.Stock</span>
+                            }
+                        </td>
+
+                        <td class="text-muted small fw-semibold">@item.Sizes</td>
+
+                        <td>
+                            @if (item.CategoryProducts != null && item.CategoryProducts.Any())
+                            {
+                                foreach (var cp in item.CategoryProducts)
+                                {
+                                    <span class="badge bg-secondary me-1">@cp.Category?.Name</span>
+                                }
+                            }
+                            else
+                            {
+                                <span class="text-muted small">—</span>
+                            }
+                        </td>
+                        <td>
+                            <div class="d-flex gap-1 justify-content-center">
+                                <a href="/Product/Details/@item.Id"
+                                   class="btn btn-sm btn-outline-info" title="Chi tiết">
+                                    <i class="bi bi-eye-fill"></i>
+                                </a>
+                                <a href="/Product/Edit/@item.Id"
+                                   class="btn btn-sm btn-outline-warning" title="Sửa">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </a>
+                                <form method="post" action="/Product/Delete/@item.Id"
+                                      onsubmit="return confirm('Xóa sản phẩm \'@item.Name\'?')">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Xóa">
+                                        <i class="bi bi-trash-fill"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

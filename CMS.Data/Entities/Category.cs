@@ -2,13 +2,13 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 18/05/2026
-    Mô tả    : Thực thể Danh mục (Category) - ánh xạ tới bảng Categories trong database
-              - Id                : Khóa chính, tự tăng
-              - Name              : Tên danh mục, cho phép null
-              - Description       : Mô tả danh mục, cho phép null
-              - Posts             : Danh sách bài viết thuộc danh mục này (quan hệ 1-Nhiều)
-              - CategoryProducts  : Danh sách liên kết với sản phẩm (quan hệ Nhiều-Nhiều qua bảng trung gian)
+    Ngày tạo : 02/06/2026
+    Mô tả    : Thực thể Danh mục Thời Trang (Category)
+              Thêm:
+              - Gender    : Danh mục thuộc giới tính nào (nam/nu/treem/all)
+              - ImageUrl  : Ảnh đại diện cho danh mục
+              - SortOrder : Thứ tự hiển thị
+              - IsActive  : Ẩn/hiện danh mục
 */
 using System.Collections.Generic;
 
@@ -16,14 +16,18 @@ namespace CMS.Data.Entities
 {
     public class Category
     {
-        public int Id { get; set; }                                           // Khóa chính, tự tăng
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string? Description { get; set; }
 
-        public string? Name { get; set; }                                     // Tên danh mục, cho phép null
+        // ── Thêm mới cho thời trang ──
+        public string? Gender { get; set; }       // "nam" | "nu" | "treem" | "all"
+        public string? ImageUrl { get; set; }     // Ảnh đại diện danh mục
+        public int SortOrder { get; set; } = 0;   // Thứ tự hiển thị
+        public bool IsActive { get; set; } = true;
 
-        public string? Description { get; set; }                              // Mô tả danh mục, cho phép null
-
-        public virtual ICollection<Post>? Posts { get; set; }                // Danh sách bài viết thuộc danh mục — cho phép null
-
-        public virtual ICollection<CategoryProduct>? CategoryProducts { get; set; } // Liên kết nhiều-nhiều với sản phẩm — cho phép null
+        // ── Navigation properties (giữ nguyên) ──
+        public virtual ICollection<Post>? Posts { get; set; }
+        public virtual ICollection<CategoryProduct>? CategoryProducts { get; set; }
     }
 }

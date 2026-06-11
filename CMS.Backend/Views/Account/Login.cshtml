@@ -2,12 +2,8 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 17/05/2026
-    Mô tả    : Trang đăng nhập hệ thống
-              - Đăng nhập bằng Username + Password
-              - Phân quyền redirect: Nhân viên → trang quản trị, Khách → trang chủ
-              - Nút Đăng ký tài khoản → /Account/Register
-              - Nút Quên mật khẩu → /Account/ForgotPassword
+    Ngày tạo : 04/06/2026
+    Mô tả    : Trang đăng nhập - hover để mở form
 *@
 @{
     Layout = null;
@@ -55,11 +51,13 @@
                 pointer-events: none;
             }
 
+        /* ── CARD WRAP ── */
         .card-wrap {
             position: relative;
             width: 420px;
             padding: 3px;
             border-radius: 20px;
+            cursor: pointer;
         }
 
             .card-wrap::before {
@@ -113,9 +111,57 @@
             position: relative;
         }
 
+        /* ── LOGIN BUTTON (trạng thái ban đầu) ── */
+        .login-trigger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 40px;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--pink);
+            transition: color 0.3s;
+            user-select: none;
+        }
+
+            .login-trigger .arrow {
+                color: var(--cyan);
+                font-size: 20px;
+                transition: transform 0.3s;
+            }
+
+            .login-trigger .heart {
+                color: var(--pink);
+                font-size: 16px;
+            }
+
+        /* ── FORM (ẩn ban đầu) ── */
+        .form-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.4s ease;
+        }
+
+        /* ── HOVER: bật form lên ── */
+        .card-wrap:hover .form-content {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        .card-wrap:hover .login-trigger .arrow {
+            transform: rotate(90deg);
+        }
+
+        /* ── Form styles ── */
         .system-title {
             text-align: center;
             margin-bottom: 24px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.07);
         }
 
             .system-title h4 {
@@ -124,13 +170,7 @@
                 font-size: 14px;
                 letter-spacing: 3px;
                 text-shadow: 0 0 10px rgba(0,245,255,0.5);
-            }
-
-            .system-title p {
-                color: rgba(255,255,255,0.3);
-                font-size: 12px;
-                letter-spacing: 1px;
-                margin-top: 4px;
+                margin-top: 16px;
             }
 
         .input-group {
@@ -262,35 +302,46 @@
     <div class="card-wrap">
         <div class="card">
             <div class="card-inner">
-                <div class="system-title">
-                    <h4>⬡ MAI TRINH MOBILE CMS ⬡</h4>
-                </div>
-                <form asp-action="Login" method="post">
-                    @if (ViewBag.Error != null)
-                    {
-                        <div class="alert-error">⚠ @ViewBag.Error</div>
-                    }
 
-                    @* Ô nhập tên đăng nhập *@
-                    <div class="input-group">
-                        <input type="text" name="username" placeholder="Username" autocomplete="off" required />
+                <!-- Nút LOGIN hiện ban đầu -->
+                <div class="login-trigger">
+                    <span class="arrow">⇒</span>
+                    LOGIN
+                    <span class="heart">♥</span>
+                </div>
+
+                <!-- Form bật lên khi hover -->
+                <div class="form-content">
+                    <div class="system-title">
+                        <h4>⬡ MAI TRINH STORE ⬡</h4>
                     </div>
 
-                    @* Ô nhập mật khẩu *@
-                    <div class="input-group">
-                        <input type="password" name="password" placeholder="Password" autocomplete="off" required />
+                    <form asp-action="Login" method="post">
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert-error">⚠ @ViewBag.Error</div>
+                        }
+
+                        <div class="input-group">
+                            <input type="text" name="username" placeholder="Username" autocomplete="off" required />
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" name="password" placeholder="Password" autocomplete="off" required />
+                        </div>
+
+                        <a href="/Account/ForgotPassword" class="forgot-link">Quên mật khẩu?</a>
+
+                        <button type="submit" class="btn-signin">ĐĂNG NHẬP</button>
+                        <a href="/Account/Register" class="btn-register">ĐĂNG KÝ TÀI KHOẢN</a>
+                    </form>
+
+                    <div class="divider"></div>
+                    <div class="form-footer">
+                        <span>♥</span> MAI TRINH STORE — 2026 <span>♥</span>
                     </div>
-
-                    @* Link quên mật khẩu *@
-                    <a href="/Account/ForgotPassword" class="forgot-link">Quên mật khẩu?</a>
-
-                    <button type="submit" class="btn-signin">ĐĂNG NHẬP</button>
-                    <a href="/Account/Register" class="btn-register">ĐĂNG KÝ TÀI KHOẢN</a>
-                </form>
-                <div class="divider"></div>
-                <div class="form-footer">
-                    <span>♥</span> MAI TRINH MOBILE — 2026 <span>♥</span>
                 </div>
+
             </div>
         </div>
     </div>
