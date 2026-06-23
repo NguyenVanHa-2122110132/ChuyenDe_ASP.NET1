@@ -12,7 +12,8 @@
               - Phân quyền: Administrator, Admin toàn quyền. Sales, Cashier chỉ được xem
 */
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization; // Thêm namespace để dùng [Authorize]
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using CMS.Data;
 using CMS.Data.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -20,23 +21,24 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CMS.Backend.Controllers
 {
-    public class PostController : Controller
+    // ✅ Thêm AuthenticationSchemes = Cookie cho toàn bộ controller MVC admin
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+               Roles = "Administrator,Admin,Sales,Cashier")]
+    public class PostController : BaseAdminController
     {
-        private readonly ApplicationDbContext _context; // Biến kết nối database
+        private readonly ApplicationDbContext _context;
 
         public PostController(ApplicationDbContext context)
         {
-            _context = context; // Nhận database context qua Dependency Injection
+            _context = context;
         }
 
         // ========== INDEX ==========
         // Administrator, Admin, Sales, Cashier đều được xem danh sách bài viết
-        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         public IActionResult Index(int? id)
         {
             if (id == null)
             {
-                // Lấy tất cả bài viết, sắp xếp mới nhất lên đầu, kèm thông tin danh mục
                 var allPosts = _context.Posts
                                 .OrderByDescending(p => p.CreatedDate)
                                 .Include(p => p.Category)
@@ -44,7 +46,6 @@ namespace CMS.Backend.Controllers
                 return View(allPosts);
             }
 
-            // Lọc bài viết theo danh mục nếu có truyền id
             var posts = _context.Posts
                         .Where(p => p.CategoryId == id)
                         .OrderByDescending(p => p.CreatedDate)
@@ -54,25 +55,23 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== DETAILS ==========
-        // Administrator, Admin, Sales, Cashier đều được xem chi tiết bài viết
-        [Authorize(Roles = "Administrator,Admin,Sales,Cashier")]
         public IActionResult Details(int id)
         {
             var post = _context.Posts
-                .Include(p => p.Category)           // Join bảng Category để lấy tên danh mục
-                .FirstOrDefault(p => p.Id == id);   // Tìm bài viết theo ID
+                .Include(p => p.Category)
+                .FirstOrDefault(p => p.Id == id);
 
-            if (post == null) return NotFound(); // Không tìm thấy trả về 404
+            if (post == null) return NotFound();
             return View(post);
         }
 
         // ========== CREATE GET ==========
-        // Chỉ Administrator và Admin mới được thêm bài viết
-        [Authorize(Roles = "Administrator,Admin")]
+        // ✅ Chỉ ghi đè Roles cho action cần quyền cao hơn
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+                   Roles = "Administrator,Admin")]
         [HttpGet]
         public IActionResult Create()
         {
-            // Load danh sách danh mục xuống dropdown
             ViewBag.Categories = new SelectList(
                 _context.Categories.ToList(), "Id", "Name"
             );
@@ -80,15 +79,14 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== EDIT GET ==========
-        // Chỉ Administrator và Admin mới được sửa bài viết
-        [Authorize(Roles = "Administrator,Admin")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+                   Roles = "Administrator,Admin")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var post = _context.Posts.Find(id);   // Tìm bài viết theo ID
-            if (post == null) return NotFound();   // Không tìm thấy trả về 404
+            var post = _context.Posts.Find(id);
+            if (post == null) return NotFound();
 
-            // Load danh sách danh mục, tự chọn đúng danh mục cũ
             ViewBag.Categories = new SelectList(
                 _context.Categories.ToList(), "Id", "Name", post.CategoryId
             );
@@ -96,7 +94,8 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== CREATE POST ==========
-        [Authorize(Roles = "Administrator,Admin")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+                   Roles = "Administrator,Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(Post model, IFormFile? ImageFile)
         {
@@ -130,7 +129,8 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== EDIT POST ==========
-        [Authorize(Roles = "Administrator,Admin")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+                   Roles = "Administrator,Admin")]
         [HttpPost]
         public async Task<IActionResult> Edit(Post model, IFormFile? ImageFile)
         {
@@ -163,17 +163,17 @@ namespace CMS.Backend.Controllers
         }
 
         // ========== DELETE ==========
-        // Chỉ Administrator và Admin mới được xóa bài viết
-        [Authorize(Roles = "Administrator,Admin")]
+        [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
+                   Roles = "Administrator,Admin")]
         public IActionResult Delete(int id)
         {
-            var post = _context.Posts.Find(id); // Tìm bài viết theo ID
+            var post = _context.Posts.Find(id);
             if (post != null)
             {
-                _context.Posts.Remove(post);    // Xóa bài viết khỏi database
-                _context.SaveChanges();          // Lưu thay đổi
+                _context.Posts.Remove(post);
+                _context.SaveChanges();
             }
-            return RedirectToAction("Index");   // Quay về danh sách
+            return RedirectToAction("Index");
         }
     }
 }

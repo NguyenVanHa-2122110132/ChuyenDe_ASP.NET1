@@ -20,7 +20,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào quản lý danh sách giỏ hàng
-    public class CartController : Controller
+    public class CartController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

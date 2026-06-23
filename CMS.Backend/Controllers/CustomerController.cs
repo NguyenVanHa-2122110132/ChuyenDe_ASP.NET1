@@ -20,7 +20,7 @@ using CMS.Data.Entities;
 
 namespace CMS.Backend.Controllers
 {
-    public class CustomerController : Controller
+    public class CustomerController : BaseAdminController
     {
         private readonly ApplicationDbContext _context;
 

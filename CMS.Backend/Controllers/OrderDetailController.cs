@@ -19,7 +19,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CMS.Backend.Controllers
 {
-    public class OrderDetailController : Controller
+    public class OrderDetailController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

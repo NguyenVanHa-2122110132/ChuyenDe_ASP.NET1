@@ -2,38 +2,110 @@
     Họ và tên: Nguyễn Văn Hà
     MSSV     : 2122110132
     Lớp      : CCQ2211D
-    Ngày tạo : 16/05/2026
+    Ngày tạo : 14/06/2026
     Mô tả    : Trang chỉnh sửa Danh mục trong khu vực Admin.
               - Hiển thị form với dữ liệu cũ được điền sẵn để chỉnh sửa
               - Bắt buộc có input hidden Id để Entity Framework biết sửa đúng dòng
+              - Bổ sung trường Gender để người quản trị có thể thay đổi
+                giới tính của danh mục → hiện đúng tab trên frontend React
+              - Bổ sung trường SortOrder, ImageUrl, IsActive để quản lý đầy đủ
               - Khi bấm Cập nhật sẽ gửi POST request đến CategoryController (action Edit)
               - Khi bấm Hủy bỏ sẽ trở về trang danh sách Category
 *@
 @model CMS.Data.Entities.Category
-
 @{
-    Layout = "_LayoutAdmin";
-    ViewData["Title"] = "Sửa danh mục";
+    Layout = "_LayoutAdmin";                 @* Dùng layout Admin chung cho toàn bộ trang quản trị *@
+    ViewData["Title"] = "Sửa danh mục";     @* Tiêu đề tab trình duyệt *@
 }
 
 <div class="container mt-4">
     <h2 class="text-warning">SỬA DANH MỤC</h2>
     <hr />
+
+    @* Form gửi dữ liệu POST đến action Edit của CategoryController *@
     <form asp-action="Edit" method="post">
+
+        @* Hidden field chứa Id — bắt buộc để Entity Framework biết sửa đúng dòng trong database *@
         <input type="hidden" asp-for="Id" />
+
+        @* ── Tên danh mục ── *@
         <div class="mb-3">
             <label class="form-label">Tên danh mục:</label>
-            <input asp-for="Name" class="form-control" />
+            @* asp-for tự động điền giá trị cũ vào ô input *@
+            <input asp-for="Name" class="form-control"
+                   placeholder="VD: Dép Lào, Tất Vớ, Áo Thun..." />
+            @* Hiển thị lỗi validation nếu tên bị bỏ trống *@
             <span asp-validation-for="Name" class="text-danger small"></span>
         </div>
+
+        @* ── Mô tả danh mục ── *@
         <div class="mb-3">
             <label class="form-label">Mô tả:</label>
-            <textarea asp-for="Description" class="form-control"></textarea>
+            @* asp-for tự động điền nội dung mô tả cũ vào textarea *@
+            <textarea asp-for="Description" class="form-control" rows="3"
+                      placeholder="Mô tả ngắn về danh mục này..."></textarea>
             <span asp-validation-for="Description" class="text-danger small"></span>
         </div>
+
+        @* ── Giới tính (QUAN TRỌNG) ──
+             Trường này quyết định danh mục hiện ở tab nào trên trang /thoi-trang
+             Frontend React gọi API: /CategoriesProducts?gender=nam (hoặc nu / treem)
+             asp-for tự động chọn đúng option theo giá trị Gender hiện tại *@
+        <div class="mb-3">
+            <label class="form-label">
+                Giới tính: <span class="text-danger">*</span>
+            </label>
+            <select asp-for="Gender" class="form-select">
+                <option value="">-- Chọn giới tính --</option>
+                <option value="nam">👔 Nam</option>       @* Hiện ở tab Thời Trang Nam *@
+                <option value="nu">👗 Nữ</option>         @* Hiện ở tab Thời Trang Nữ *@
+                <option value="treem">🧒 Trẻ Em</option>  @* Hiện ở tab Thời Trang Trẻ Em *@
+                <option value="all">🌐 Tất cả</option>    @* Hiện ở tất cả các tab *@
+            </select>
+            @* Chú thích giúp người quản trị hiểu tác dụng của trường này *@
+            <div class="form-text text-warning fw-semibold">
+                ⚠️ Bắt buộc chọn — Quyết định danh mục hiện ở tab nào trên website
+            </div>
+            <span asp-validation-for="Gender" class="text-danger small"></span>
+        </div>
+
+        @* ── Thứ tự hiển thị ──
+             Số nhỏ hơn sẽ hiển thị trước trong danh sách lọc trên frontend
+             asp-for tự động điền giá trị SortOrder hiện tại *@
+        <div class="mb-3">
+            <label class="form-label">Thứ tự hiển thị:</label>
+            <input asp-for="SortOrder" type="number" class="form-control" min="0" />
+            <div class="form-text text-muted">Số nhỏ hiển thị trước (0, 1, 2...)</div>
+        </div>
+
+        @* ── Ảnh đại diện ──
+             URL ảnh đại diện cho danh mục, có thể để trống
+             asp-for tự động điền URL ảnh hiện tại *@
+        <div class="mb-3">
+            <label class="form-label">Ảnh đại diện (URL):</label>
+            <input asp-for="ImageUrl" class="form-control"
+                   placeholder="https://... (có thể để trống)" />
+            <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+        </div>
+
+        @* ── Trạng thái hiển thị ──
+             asp-for tự động tick/bỏ tick theo giá trị IsActive hiện tại
+             Bỏ check = ẩn danh mục khỏi website không cần xóa *@
+        <div class="mb-4">
+            <div class="form-check form-switch">
+                <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+                <label class="form-check-label">Hiển thị trên website</label>
+            </div>
+            <div class="form-text text-muted">
+                Bỏ chọn để ẩn danh mục khỏi website mà không cần xóa
+            </div>
+        </div>
+
+        @* ── Nút hành động ── *@
         <button type="submit" class="btn btn-warning">
             <i class="bi bi-save"></i> Cập nhật
         </button>
         <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+
     </form>
 </div>

@@ -7,8 +7,12 @@
               - GetAll()                : Lấy tất cả, hỗ trợ lọc ?gender & ?size
               - GetByCategoryProduct()  : Lọc theo danh mục, hỗ trợ thêm ?gender & ?size
               - GetByGender()           : Lấy sản phẩm theo giới tính
-              - Search()                : Tìm kiếm theo tên + gender + size (Đã sửa lỗi logic chứa ký tự 'm' trong 'ml')
+              - Search()                : Tìm kiếm theo tên + gender + size
               - GetDetail()             : Chi tiết sản phẩm kèm danh mục và ảnh
+              - GetNewProducts()        : Sản phẩm mới (IsNew = true)
+              - GetHotProducts()        : Sản phẩm hot (IsHot = true)
+              - GetSaleProducts()       : Sản phẩm sale (IsSale = true)
+              [CẬP NHẬT 16/06/2026]: Thêm 3 API mới cho trang chủ
 */
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -42,7 +46,6 @@ namespace CMS.Backend.Controllers
             if (!string.IsNullOrEmpty(gender))
                 query = query.Where(p => p.Gender == gender);
 
-            // Bổ sung lọc size cho toàn bộ sản phẩm
             if (!string.IsNullOrEmpty(size))
                 query = query.Where(p => p.Sizes != null && p.Sizes.Contains(size));
 
@@ -80,7 +83,7 @@ namespace CMS.Backend.Controllers
         public async Task<IActionResult> GetByCategoryProduct(
             int categoryProductId,
             [FromQuery] string? gender = null,
-            [FromQuery] string? size = null) // Đã thêm bộ lọc kích thước/dung tích ở đây
+            [FromQuery] string? size = null)
         {
             var query = _context.Products
                 .Where(p => p.IsActive)
@@ -90,7 +93,6 @@ namespace CMS.Backend.Controllers
             if (!string.IsNullOrEmpty(gender))
                 query = query.Where(p => p.Gender == gender);
 
-            // Thực hiện lọc dung tích/kích cỡ theo danh mục
             if (!string.IsNullOrEmpty(size))
                 query = query.Where(p => p.Sizes != null && p.Sizes.Contains(size));
 
@@ -174,18 +176,12 @@ namespace CMS.Backend.Controllers
             if (!string.IsNullOrEmpty(gender))
                 query = query.Where(p => p.Gender == gender);
 
-            // Xử lý bộ lọc thông minh: Nếu lọc size 'M', loại trừ trường hợp chứa 'ml' của nước hoa để tránh lẫn lộn
             if (!string.IsNullOrEmpty(size))
             {
                 if (size.ToUpper() == "M")
-                {
-                    // Lấy sản phẩm chứa chữ M nhưng KHÔNG CHỨA "ml"
                     query = query.Where(p => p.Sizes != null && p.Sizes.Contains(size) && !p.Sizes.Contains("ml"));
-                }
                 else
-                {
                     query = query.Where(p => p.Sizes != null && p.Sizes.Contains(size));
-                }
             }
 
             var products = await query
@@ -250,6 +246,105 @@ namespace CMS.Backend.Controllers
                     .Select(i => i.ImageUrl)
                     .ToList()
             });
+        }
+
+        // ── API 6: Sản phẩm MỚI ──
+        // GET api/products/new?limit=8
+        [HttpGet("new")]
+        public async Task<IActionResult> GetNewProducts([FromQuery] int limit = 8)
+        {
+            var products = await _context.Products
+                .Where(p => p.IsActive && p.IsNew)
+                .OrderByDescending(p => p.Id)
+                .Take(limit)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Name,
+                    p.Price,
+                    p.OriginalPrice,
+                    p.ImageUrl,
+                    p.Gender,
+                    p.Sizes,
+                    p.Colors,
+                    p.Brand,
+                    p.IsNew,
+                    p.IsHot,
+                    p.IsSale,
+                    p.Stock,
+                    CategoryName = p.CategoryProducts!
+                        .Select(cp => cp.Category!.Name)
+                        .FirstOrDefault()
+                })
+                .ToListAsync();
+
+            return Ok(products);
+        }
+
+        // ── API 7: Sản phẩm HOT ──
+        // GET api/products/hot?limit=8
+        [HttpGet("hot")]
+        public async Task<IActionResult> GetHotProducts([FromQuery] int limit = 8)
+        {
+            var products = await _context.Products
+                .Where(p => p.IsActive && p.IsHot)
+                .OrderByDescending(p => p.Id)
+                .Take(limit)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Name,
+                    p.Price,
+                    p.OriginalPrice,
+                    p.ImageUrl,
+                    p.Gender,
+                    p.Sizes,
+                    p.Colors,
+                    p.Brand,
+                    p.IsNew,
+                    p.IsHot,
+                    p.IsSale,
+                    p.Stock,
+                    CategoryName = p.CategoryProducts!
+                        .Select(cp => cp.Category!.Name)
+                        .FirstOrDefault()
+                })
+                .ToListAsync();
+
+            return Ok(products);
+        }
+
+        // ── API 8: Sản phẩm SALE ──
+        // GET api/products/sale?limit=8
+        [HttpGet("sale")]
+        public async Task<IActionResult> GetSaleProducts([FromQuery] int limit = 8)
+        {
+            var products = await _context.Products
+                .Where(p => p.IsActive && p.IsSale)
+                .OrderByDescending(p => p.Id)
+                .Take(limit)
+                .Select(p => new
+                {
+                    p.Id,
+                    p.Name,
+                    p.Price,
+                    p.OriginalPrice,
+                    p.ImageUrl,
+                    p.Gender,
+                    p.Sizes,
+                    p.Colors,
+                    p.Brand,
+                    p.IsNew,
+                    p.IsHot,
+                    p.IsSale,
+                    p.Stock,
+                    CategoryName = p.CategoryProducts!
+                        .Select(cp => cp.Category!.Name)
+                        .FirstOrDefault()
+                })
+                .ToListAsync();
+
+            return Ok(products);
         }
     }
 }

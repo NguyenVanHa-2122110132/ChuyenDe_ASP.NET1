@@ -21,7 +21,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào ban quản lý kho ảnh
-    public class ProductImageController : Controller
+    public class ProductImageController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

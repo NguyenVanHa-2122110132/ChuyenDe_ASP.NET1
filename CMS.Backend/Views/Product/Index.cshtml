@@ -6,12 +6,19 @@
     Mô tả    : Giao diện quản lý danh sách sản phẩm (Admin)
               - Hiển thị dạng bảng admin chuyên nghiệp
               - Có nút Thêm mới, Sửa, Xóa
+              - Sửa ngày 14/06/2026: Ghép base URL frontend (localhost:3000)
+                vào ImageUrl vì ảnh sản phẩm được lưu trong thư mục public
+                của React (cms.frontend/public/images/...) chứ không phải
+                trong wwwroot của ASP.NET Backend
               - File nằm tại: Views/Product/Index.cshtml
 *@
 @model IEnumerable<CMS.Data.Entities.Product>
 @{
     Layout = "_LayoutAdmin";
     ViewData["Title"] = "Quản lý sản phẩm";
+
+    @* Base URL của React frontend — nơi chứa toàn bộ ảnh sản phẩm *@
+    var frontendUrl = "http://localhost:3000";
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -47,27 +54,44 @@
                 {
                     <tr>
                         <td class="fw-bold text-muted">@item.Id</td>
+
+                        @* ── Cột ảnh sản phẩm ──
+                             ImageUrl lưu dạng: /images/nuoc-hoa/abc.jpg
+                             Ảnh thực tế nằm trong: cms.frontend/public/images/...
+                             Phải ghép frontendUrl vào phía trước để Admin
+                             trỏ đúng đến file ảnh trên React server
+                             onerror: nếu ảnh vẫn lỗi thì hiện placeholder *@
                         <td>
                             @if (!string.IsNullOrEmpty(item.ImageUrl))
                             {
-                                <img src="@item.ImageUrl" alt="@item.Name"
+                                <img src="@(frontendUrl + item.ImageUrl)"
+                                     alt="@item.Name"
                                      style="width:50px; height:50px; object-fit:cover;"
-                                     class="rounded shadow-sm">
+                                     class="rounded shadow-sm"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/50x50?text=No+Image'" />
                             }
                             else
                             {
+                                @* Không có ảnh thì hiện icon placeholder *@
                                 <i class="bi bi-image text-muted fs-4"></i>
                             }
                         </td>
+
                         <td class="text-start ps-3 fw-semibold">@item.Name</td>
+
+                        @* Mô tả cắt ngắn tối đa 50 ký tự, hover xem đầy đủ *@
                         <td class="text-start text-muted small">
                             <span title="@item.Description">
                                 @(item.Description?.Length > 50 ? item.Description.Substring(0, 50) + "..." : item.Description)
                             </span>
                         </td>
+
+                        @* Giá hiển thị định dạng tiền Việt *@
                         <td class="text-danger fw-bold">
                             @item.Price.ToString("N0") <small class="text-muted fw-normal">đ</small>
                         </td>
+
+                        @* Tồn kho đổi màu theo mức độ: đỏ ≤5, vàng ≤20, xanh >20 *@
                         <td>
                             @if (item.Stock <= 5)
                             {
@@ -83,8 +107,10 @@
                             }
                         </td>
 
+                        @* Kích thước sản phẩm (S/M/L/XL...) *@
                         <td class="text-muted small fw-semibold">@item.Sizes</td>
 
+                        @* Danh mục sản phẩm — có thể thuộc nhiều danh mục *@
                         <td>
                             @if (item.CategoryProducts != null && item.CategoryProducts.Any())
                             {
@@ -98,16 +124,21 @@
                                 <span class="text-muted small">—</span>
                             }
                         </td>
+
+                        @* Các nút thao tác: Xem chi tiết, Sửa, Xóa *@
                         <td>
                             <div class="d-flex gap-1 justify-content-center">
+                                @* Nút xem chi tiết sản phẩm *@
                                 <a href="/Product/Details/@item.Id"
                                    class="btn btn-sm btn-outline-info" title="Chi tiết">
                                     <i class="bi bi-eye-fill"></i>
                                 </a>
+                                @* Nút sửa sản phẩm *@
                                 <a href="/Product/Edit/@item.Id"
                                    class="btn btn-sm btn-outline-warning" title="Sửa">
                                     <i class="bi bi-pencil-fill"></i>
                                 </a>
+                                @* Nút xóa sản phẩm — có xác nhận trước khi xóa *@
                                 <form method="post" action="/Product/Delete/@item.Id"
                                       onsubmit="return confirm('Xóa sản phẩm \'@item.Name\'?')">
                                     @Html.AntiForgeryToken()

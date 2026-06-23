@@ -48,7 +48,15 @@
                             <td>
                                 @if (order.Status == 1)
                                 {
-                                    <span class="badge bg-success">Đã xác nhận</span>
+                                    <span class="badge bg-primary">Đã xác nhận</span>
+                                }
+                                else if (order.Status == 2)
+                                {
+                                    <span class="badge bg-info text-dark">Đang giao hàng</span>
+                                }
+                                else if (order.Status == 3)
+                                {
+                                    <span class="badge bg-danger">Đã hủy</span>
                                 }
                                 else
                                 {
@@ -58,9 +66,18 @@
                             <td>@order.Notes</td>
                             <td class="fw-bold text-danger">@tongTien.ToString("N0") VNĐ</td>
                             <td>
-                                <a href="/Order/Details/@order.Id" class="btn btn-sm btn-primary">
-                                    Xem chi tiết
-                                </a>
+                                <div class="d-flex justify-content-center gap-1">
+                                    <a href="/Order/Details/@order.Id" class="btn btn-sm btn-primary">
+                                        <i class="bi bi-eye"></i> Xem chi tiết
+                                    </a>
+
+                                    @if (order.Status == 0)
+                                    {
+                                        <button class="btn btn-sm btn-success" onclick="confirmOrder(@order.Id)">
+                                            <i class="bi bi-check-circle"></i> Xác nhận
+                                        </button>
+                                    }
+                                </div>
                             </td>
                         </tr>
                     }
@@ -71,3 +88,36 @@
 </div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+@* ĐƯA SCRIPT RA NGOÀI VÒNG LẶP ĐỂ TRÁNH TRÙNG LẶP HÀM *@
+<script>
+    function confirmOrder(orderId) {
+        if (!confirm(`Bạn có chắc chắn muốn xác nhận đơn hàng #${orderId} này không?`)) {
+            return;
+        }
+
+        fetch(`https://localhost:7038/api/Orders/Confirm/${orderId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert(`Xác nhận đơn hàng #${orderId} thành công!`);
+                location.reload();
+            } else {
+                response.json().then(data => {
+                    alert(data.message || "Có lỗi xảy ra khi xác nhận đơn hàng.");
+                }).catch(() => {
+                    alert("Có lỗi xảy ra khi xác nhận đơn hàng.");
+                });
+            }
+        })
+        .catch(error => {
+            console.error("Lỗi kết nối API:", error);
+            alert("Không thể kết nối đến máy chủ.");
+        });
+    }
+</script>

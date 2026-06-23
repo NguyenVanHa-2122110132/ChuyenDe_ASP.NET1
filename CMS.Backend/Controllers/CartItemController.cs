@@ -20,7 +20,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [AllowAnonymous] // Cho phép tất cả người mua hàng thao tác với giỏ hàng của họ
-    public class CartItemController : Controller
+    public class CartItemController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

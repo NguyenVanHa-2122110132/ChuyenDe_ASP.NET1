@@ -20,7 +20,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CMS.Backend.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseAdminController
     {
         private readonly ApplicationDbContext _context;
 

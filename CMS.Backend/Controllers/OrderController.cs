@@ -21,7 +21,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CMS.Backend.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : BaseAdminController
     {
         private readonly ApplicationDbContext _context;
 

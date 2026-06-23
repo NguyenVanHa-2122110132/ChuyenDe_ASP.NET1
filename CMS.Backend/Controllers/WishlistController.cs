@@ -20,7 +20,7 @@ using System.Linq;
 
 namespace CMS.Backend.Controllers
 {
-    public class WishlistController : Controller
+    public class WishlistController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

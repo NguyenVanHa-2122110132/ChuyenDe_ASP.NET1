@@ -21,7 +21,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào hệ thống quản lý danh mục blog
-    public class PostCategoryController : Controller
+    public class PostCategoryController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

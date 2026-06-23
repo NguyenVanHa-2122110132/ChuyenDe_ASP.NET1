@@ -39,7 +39,8 @@ namespace CMS.Data.Entities
         public virtual ICollection<Comment>? Comments { get; set; }      
         public virtual ICollection<Review>? Reviews { get; set; }       
         public virtual ICollection<Wishlist>? Wishlists { get; set; }    
-        public virtual ICollection<CouponUsage>? CouponUsages { get; set; } 
+        public virtual ICollection<CouponUsage>? CouponUsages { get; set; }
+        public string? AvatarUrl { get; set; } // Đường dẫn ảnh đại diện, cho phép null
 
     }
 }

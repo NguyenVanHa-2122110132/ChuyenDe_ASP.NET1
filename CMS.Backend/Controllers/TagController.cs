@@ -21,7 +21,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào hệ thống quản lý thẻ tag
-    public class TagController : Controller
+    public class TagController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

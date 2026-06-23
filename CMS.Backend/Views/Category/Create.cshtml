@@ -3,35 +3,99 @@
     MSSV     : 2122110132
     Lớp      : CCQ2211D
     Ngày tạo : 24/05/2026
+    Ngày cập nhật: 14/06/2026
     Mô tả    : Trang thêm mới Danh mục trong khu vực Admin.
-              - Hiển thị form nhập liệu gồm: Tên danh mục, Mô tả
+              - Hiển thị form nhập liệu gồm: Tên danh mục, Mô tả,
+                Giới tính (Gender), Thứ tự hiển thị, Ảnh đại diện, Trạng thái
+              - Gender là bắt buộc để danh mục hiển thị đúng tab trên frontend
+                (Nam / Nữ / Trẻ Em / Tất cả)
               - Khi bấm Lưu sẽ gửi POST request đến CategoryController (action Create)
               - Khi bấm Hủy bỏ sẽ trở về trang danh sách Category
 *@
 @model CMS.Data.Entities.Category
-
 @{
-    Layout = "_LayoutAdmin";
-    ViewData["Title"] = "Thêm danh mục";
+    Layout = "_LayoutAdmin";                  @* Dùng layout Admin chung cho toàn bộ trang quản trị *@
+    ViewData["Title"] = "Thêm danh mục";     @* Tiêu đề tab trình duyệt *@
 }
 
 <div class="container mt-4">
     <h2 class="text-primary">THÊM DANH MỤC MỚI</h2>
     <hr />
+
+    @* Form gửi dữ liệu POST đến action Create của CategoryController *@
     <form asp-action="Create" method="post">
+
+        @* ── Tên danh mục ── *@
         <div class="mb-3">
             <label class="form-label">Tên danh mục:</label>
-            <input asp-for="Name" class="form-control" />
+            <input asp-for="Name" class="form-control"
+                   placeholder="VD: Dép Lào, Tất Vớ, Áo Thun..." />
+            @* Hiển thị lỗi validation nếu tên bị bỏ trống *@
             <span asp-validation-for="Name" class="text-danger small"></span>
         </div>
+
+        @* ── Mô tả danh mục ── *@
         <div class="mb-3">
             <label class="form-label">Mô tả:</label>
-            <textarea asp-for="Description" class="form-control"></textarea>
+            <textarea asp-for="Description" class="form-control" rows="3"
+                      placeholder="Mô tả ngắn về danh mục này..."></textarea>
             <span asp-validation-for="Description" class="text-danger small"></span>
         </div>
+
+        @* ── Giới tính (QUAN TRỌNG) ──
+             Trường này quyết định danh mục sẽ hiện ở tab nào trên trang /thoi-trang
+             Frontend React gọi API: /CategoriesProducts?gender=nam (hoặc nu / treem)
+             Nếu không chọn gender → danh mục sẽ KHÔNG hiện trên website *@
+        <div class="mb-3">
+            <label class="form-label">
+                Giới tính: <span class="text-danger">*</span>
+            </label>
+            <select asp-for="Gender" class="form-select">
+                <option value="">-- Chọn giới tính --</option>
+                <option value="nam">👔 Nam</option>       @* Hiện ở tab Thời Trang Nam *@
+                <option value="nu">👗 Nữ</option>         @* Hiện ở tab Thời Trang Nữ *@
+                <option value="treem">🧒 Trẻ Em</option>  @* Hiện ở tab Thời Trang Trẻ Em *@
+                <option value="all">🌐 Tất cả</option>    @* Hiện ở tất cả các tab *@
+            </select>
+            @* Chú thích giúp người quản trị hiểu tác dụng của trường này *@
+            <div class="form-text text-warning fw-semibold">
+                ⚠️ Bắt buộc chọn — Quyết định danh mục hiện ở tab nào trên website
+            </div>
+            <span asp-validation-for="Gender" class="text-danger small"></span>
+        </div>
+
+        @* ── Thứ tự hiển thị ──
+             Số nhỏ hơn sẽ hiển thị trước trong danh sách lọc trên frontend *@
+        <div class="mb-3">
+            <label class="form-label">Thứ tự hiển thị:</label>
+            <input asp-for="SortOrder" type="number" class="form-control" value="0" min="0" />
+            <div class="form-text text-muted">Số nhỏ hiển thị trước (0, 1, 2...)</div>
+        </div>
+
+        @* ── Ảnh đại diện ──
+             URL ảnh đại diện cho danh mục, có thể để trống *@
+        <div class="mb-3">
+            <label class="form-label">Ảnh đại diện (URL):</label>
+            <input asp-for="ImageUrl" class="form-control"
+                   placeholder="https://... (có thể để trống)" />
+            <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+        </div>
+
+        @* ── Trạng thái hiển thị ──
+             Mặc định checked = hiển thị trên website
+             Bỏ check = ẩn danh mục khỏi website *@
+        <div class="mb-4">
+            <div class="form-check form-switch">
+                <input asp-for="IsActive" class="form-check-input" type="checkbox" checked />
+                <label class="form-check-label">Hiển thị trên website</label>
+            </div>
+        </div>
+
+        @* ── Nút hành động ── *@
         <button type="submit" class="btn btn-success">
             <i class="bi bi-save"></i> Lưu vào hệ thống
         </button>
         <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+
     </form>
 </div>

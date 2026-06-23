@@ -21,7 +21,7 @@ using System.Linq;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được quyền quản lý kho
-    public class InventoryController : Controller
+    public class InventoryController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

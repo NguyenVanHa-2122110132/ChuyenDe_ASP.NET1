@@ -20,7 +20,7 @@ using CMS.Data.Entities;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào quản lý
-    public class CommentController : Controller
+    public class CommentController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

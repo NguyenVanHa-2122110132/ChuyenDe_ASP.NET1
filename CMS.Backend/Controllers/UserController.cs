@@ -21,7 +21,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator")]
-    public class UserController : Controller
+    public class UserController : BaseAdminController
     {
         private readonly ApplicationDbContext _context;
 

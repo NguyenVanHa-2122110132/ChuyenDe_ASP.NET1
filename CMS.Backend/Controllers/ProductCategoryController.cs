@@ -19,7 +19,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace CMS.Backend.Controllers
 {
     [Authorize(Roles = "Administrator,Admin")] // Chỉ Administrator và Admin mới được vào
-    public class ProductCategoryController : Controller
+    public class ProductCategoryController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 

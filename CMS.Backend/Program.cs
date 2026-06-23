@@ -41,12 +41,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration
         .GetConnectionString("DefaultConnection")));
 
-// ĐĂNG KÝ DỊCH VỤ XÁC THỰC (COOKIE CHO BACKEND + JWT CHO REACT)
+// ĐÁNG KÝ DỊCH VỤ XÁC THỰC LAI (TỰ ĐỘNG NHẬN DIỆN COOKIE CHO MVC VÀ JWT CHO API REACT)
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    // ✅ Đổi default sang JWT cho API React
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-.AddCookie(options =>
+.AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
 {
     options.LoginPath = "/Account/Login";
     options.AccessDeniedPath = "/Account/AccessDenied";
@@ -76,6 +78,8 @@ builder.Services.AddAuthentication(options =>
             Encoding.UTF8.GetBytes("MaiTrinhSecretKey2026MaiTrinhSecretKey2026")),
         ValidateIssuer = false,
         ValidateAudience = false,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
     };
 });
 
@@ -165,13 +169,20 @@ app.UseAuthorization();  // Kích hoạt Middleware kiểm tra quyền hạn tru
 // [BẢO MẬT] MIDDLEWARE CHẶN VÀ PHÂN QUYỀN ĐIỀU HƯỚNG DÀNH RIÊNG CHO KHÁCH HÀNG (CUSTOMER)
 app.Use(async (context, next) =>
 {
+    var path = context.Request.Path.Value?.ToLower() ?? "";
+
+    // ➕ THÊM DÒNG NÀY: Nếu React đang gọi các đường dẫn API thì CHO QUA LUÔN, không chặn nữa!
+    if (path.StartsWith("/api"))
+    {
+        await next();
+        return;
+    }
+
     var user = context.User;
 
     // Kiểm tra nếu tài khoản đã đăng nhập thành công và giữ vai trò là "Customer" (Khách mua hàng)
     if (user.Identity != null && user.Identity.IsAuthenticated && user.IsInRole("Customer"))
     {
-        var path = context.Request.Path.Value?.ToLower() ?? "";
-
         // Danh sách các đường dẫn công khai mà tài khoản Customer được phép truy cập tự do ở Frontend/Giao diện gốc
         var allowedPaths = new[]
         {
