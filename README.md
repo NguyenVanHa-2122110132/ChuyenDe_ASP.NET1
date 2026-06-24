@@ -123,7 +123,7 @@ ChuyenDe_ASP.NET1/
 ### Backend
 | Công nghệ | Mục đích |
 |-----------|----------|
-| ASP.NET Core 8 | Web API + MVC Framework |
+| ASP.NET Core.NET 10 | Web API + MVC Framework |
 | Entity Framework Core | ORM, Code-First |
 | SQL Server | Cơ sở dữ liệu chính |
 | JWT Bearer | Xác thực API |
