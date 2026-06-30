@@ -33,11 +33,13 @@ namespace CMS.Backend.Controllers
                 {
                     c.Id,
                     c.Name,
-                    c.Description
+                    c.Description,
+                    c.Gender
                 })
                 .ToListAsync();
 
             return Ok(categories);
         }
+
     }
 }

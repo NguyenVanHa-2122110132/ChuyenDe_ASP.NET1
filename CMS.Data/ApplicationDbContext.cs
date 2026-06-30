@@ -71,6 +71,7 @@ namespace CMS.Data
         public DbSet<Tag> Tags { get; set; }                          // Bảng quản lý các thẻ/từ khóa của bài viết blog
         public DbSet<PostTag> PostTags { get; set; }                  // Bảng trung gian liên kết giữa Bài viết và Thẻ tag (Nhiều-Nhiều) - ĐÃ GOM GỌN DÒNG TRÙNG LẶP
         public DbSet<OtpCode> OtpCodes { get; set; } // Bảng lưu mã OTP xác nhận email
+        public DbSet<PriceSetting> PriceSettings { get; set; }
 
         // ========================================================
         protected override void OnModelCreating(ModelBuilder modelBuilder)

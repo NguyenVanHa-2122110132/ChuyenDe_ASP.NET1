@@ -198,7 +198,11 @@ app.Use(async (context, next) =>
             "/checkout/index",
             "/account/logout",
             "/account/login",
-            "/account/register"
+            "/account/register",
+            "/post",        
+            "/post/index",  
+            "/post/create", 
+            "/post/edit",   
         };
 
         // Kiểm tra xem URL hiện tại có nằm trong danh sách được phép hay không

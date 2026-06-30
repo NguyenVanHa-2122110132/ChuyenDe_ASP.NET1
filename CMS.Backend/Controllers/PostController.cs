@@ -23,7 +23,7 @@ namespace CMS.Backend.Controllers
 {
     // ✅ Thêm AuthenticationSchemes = Cookie cho toàn bộ controller MVC admin
     [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
-               Roles = "Administrator,Admin,Sales,Cashier")]
+           Roles = "Administrator,Admin,Editor,Sales,Cashier")]
     public class PostController : BaseAdminController
     {
         private readonly ApplicationDbContext _context;
@@ -35,27 +35,43 @@ namespace CMS.Backend.Controllers
 
         // ========== INDEX ==========
         // Administrator, Admin, Sales, Cashier đều được xem danh sách bài viết
-        public IActionResult Index(int? id)
+        public IActionResult Index(int? id, int page = 1)
         {
-            if (id == null)
+            int pageSize = 9; // 9 bài/trang — chia đẹp lưới 3 cột
+
+            var query = _context.Posts
+                .Include(p => p.Category)
+                .AsQueryable();
+
+            if (id != null)
             {
-                var allPosts = _context.Posts
-                                .OrderByDescending(p => p.CreatedDate)
-                                .Include(p => p.Category)
-                                .ToList();
-                return View(allPosts);
+                query = query.Where(p => p.CategoryId == id);
             }
 
-            var posts = _context.Posts
-                        .Where(p => p.CategoryId == id)
-                        .OrderByDescending(p => p.CreatedDate)
-                        .Include(p => p.Category)
-                        .ToList();
+            query = query.OrderByDescending(p => p.CreatedDate);
+
+            int totalItems = query.Count();
+            int totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+            if (page < 1) page = 1;
+            if (totalPages > 0 && page > totalPages) page = totalPages;
+
+            var posts = query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            ViewBag.Total = totalItems;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+            ViewBag.CategoryId = id;
+
             return View(posts);
         }
 
         // ========== DETAILS ==========
         public IActionResult Details(int id)
+
+
         {
             var post = _context.Posts
                 .Include(p => p.Category)
@@ -80,7 +96,7 @@ namespace CMS.Backend.Controllers
 
         // ========== EDIT GET ==========
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
-                   Roles = "Administrator,Admin")]
+                   Roles = "Administrator,Admin,Editor")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -95,7 +111,7 @@ namespace CMS.Backend.Controllers
 
         // ========== CREATE POST ==========
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
-                   Roles = "Administrator,Admin")]
+                   Roles = "Administrator,Admin,Editor")]
         [HttpPost]
         public async Task<IActionResult> Create(Post model, IFormFile? ImageFile)
         {
@@ -130,7 +146,7 @@ namespace CMS.Backend.Controllers
 
         // ========== EDIT POST ==========
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme,
-                   Roles = "Administrator,Admin")]
+                   Roles = "Administrator,Admin,Editor")]
         [HttpPost]
         public async Task<IActionResult> Edit(Post model, IFormFile? ImageFile)
         {

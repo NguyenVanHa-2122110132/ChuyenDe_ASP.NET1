@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "Quản lý Tồn kho";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-danger fw-bold">📦 QUẢN LÝ TỒN KHO</h2>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Tồn kho</th>
+                <th>Đã bán</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Áo thun nam basic</td>
+                <td>150</td>
+                <td>50</td>
+                <td><span class="badge bg-success">Còn hàng</span></td>
+                <td><button class="btn btn-warning btn-sm">✏️ Cập nhật</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nước hoa Chanel No.5</td>
+                <td>5</td>
+                <td>95</td>
+                <td><span class="badge bg-danger">Sắp hết</span></td>
+                <td><button class="btn btn-warning btn-sm">✏️ Cập nhật</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

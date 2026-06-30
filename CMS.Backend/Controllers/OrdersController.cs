@@ -3,7 +3,7 @@
     MSSV     : 2122110132
     Lớp      : CCQ2211D
     Ngày tạo : 09/06/2026
-    Mô tả    : API Controller Đơn hàng (OrdersController) - Phiên bản hoàn chỉnh tích hợp Client
+    Mô tả    : API Controller Đơn hàng (OrdersController) - hoàn chỉnh tích hợp Client
               - CreateOrder() : Tiếp nhận đơn hàng từ Checkout.jsx (POST)
               - GetOrders()   : Lấy danh sách đơn hàng thực tế cho OrdersPage.jsx (GET)
               - CancelOrder() : Xử lý hủy đơn hàng trực tiếp từ Client (PUT)
@@ -26,6 +26,8 @@ namespace CMS.Backend.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
+
+
         private readonly ApplicationDbContext _context;
         private readonly IEmailService _emailService;
 
@@ -34,10 +36,12 @@ namespace CMS.Backend.Controllers
             _context = context;
             _emailService = emailService;
         }
+      
 
         // ── 1. HTTP GET: api/orders ──
         // Lấy danh sách đơn hàng thực tế truyền về cho file OrdersPage.jsx của React
         [HttpGet]
+        [Authorize(AuthenticationSchemes = "Bearer", Roles = "Administrator,Admin,Sales,Cashier,Shipper")]
         public async Task<IActionResult> GetOrders()
         {
             try
@@ -81,6 +85,7 @@ namespace CMS.Backend.Controllers
                 return StatusCode(500, new { message = "Lỗi hệ thống khi lấy danh sách đơn hàng.", detail = ex.Message });
             }
         }
+
 
         // ── 2. HTTP POST: api/orders ──
         // Tiếp nhận dữ liệu đặt hàng gửi từ form Checkout.jsx
@@ -186,6 +191,7 @@ namespace CMS.Backend.Controllers
         // 3. HTTP PUT: api/orders/confirm/{id}
         // Tiếp nhận yêu cầu XÁC NHẬN đơn hàng từ trang quản lý Admin
         [HttpPut("Confirm/{id}")]
+        [Authorize(Roles = "Administrator,Admin,Sales")]
         public async Task<IActionResult> ConfirmOrder(int id)
         {
             try
@@ -217,6 +223,7 @@ namespace CMS.Backend.Controllers
         // ── 4. HTTP PUT: api/orders/cancel/{id} ──
         // Tiếp nhận yêu cầu hủy đơn từ nút bấm hủy hàng của trang OrdersPage.jsx
         [HttpPut("Cancel/{id}")]
+        [Authorize(Roles = "Administrator,Admin")]
         public async Task<IActionResult> CancelOrder(int id)
         {
             try

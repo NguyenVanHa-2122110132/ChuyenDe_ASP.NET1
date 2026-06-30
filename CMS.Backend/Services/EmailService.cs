@@ -8,7 +8,8 @@
               - EmailService   : Triển khai gửi email thực tế
               - SendEmailAsync        : Gửi email cơ bản
               - SendOtpEmailAsync     : Gửi mã OTP xác nhận đăng ký
-              - SendResetPasswordEmailAsync : Gửi link đặt lại mật khẩu
+              - SendResetPasswordEmailAsync : Gửi link đặt lại mật khẩu (không dùng nữa, giữ lại tránh lỗi tham chiếu)
+              - SendResetOtpEmailAsync      : Gửi mã OTP đặt lại mật khẩu (MỚI)
               - SendOrderConfirmEmailAsync  : Gửi xác nhận đơn hàng
 */
 using MailKit.Net.Smtp;
@@ -23,6 +24,7 @@ namespace CMS.Backend.Services
         Task SendEmailAsync(string toEmail, string toName, string subject, string htmlBody);
         Task SendOtpEmailAsync(string toEmail, string toName, string otp);
         Task SendResetPasswordEmailAsync(string toEmail, string toName, string resetLink);
+        Task SendResetOtpEmailAsync(string toEmail, string toName, string otp);
         Task SendOrderConfirmEmailAsync(string toEmail, string toName, string orderId, decimal total);
     }
 
@@ -63,6 +65,7 @@ namespace CMS.Backend.Services
             await smtp.SendAsync(message);    // Gửi email
             await smtp.DisconnectAsync(true); // Ngắt kết nối
         }
+
         // ========== GỬI OTP ĐĂNG KÝ ==========
         public async Task SendOtpEmailAsync(string toEmail, string toName, string otp)
         {
@@ -88,7 +91,7 @@ namespace CMS.Backend.Services
             await SendEmailAsync(toEmail, toName, "🔐 Mã OTP xác nhận tài khoản - Mai Trinh Studio", html);
         }
 
-        // ========== GỬI RESET PASSWORD ==========
+        // ========== GỬI RESET PASSWORD (LINK - không còn dùng, giữ lại để tránh lỗi nếu còn nơi gọi) ==========
         public async Task SendResetPasswordEmailAsync(string toEmail, string toName, string resetLink)
         {
             var html = $@"
@@ -113,6 +116,31 @@ namespace CMS.Backend.Services
             </div>";
 
             await SendEmailAsync(toEmail, toName, "🔑 Đặt lại mật khẩu - Mai Trinh Studio", html);
+        }
+
+        // ========== GỬI OTP QUÊN MẬT KHẨU (MỚI) ==========
+        public async Task SendResetOtpEmailAsync(string toEmail, string toName, string otp)
+        {
+            var html = $@"
+            <div style='font-family:Arial,sans-serif;max-width:500px;margin:auto;border:1px solid #e4ddd4;border-radius:8px;overflow:hidden'>
+                <div style='background:#1a1a1a;padding:24px;text-align:center'>
+                    <h1 style='color:#b8975a;font-size:1.4rem;margin:0;letter-spacing:3px'>MAI TRINH STUDIO</h1>
+                </div>
+                <div style='padding:32px'>
+                    <h2 style='color:#1a1a1a;font-size:1.1rem;margin:0 0 16px'>Đặt lại mật khẩu</h2>
+                    <p style='color:#8a8178'>Xin chào <strong>{toName}</strong>,</p>
+                    <p style='color:#8a8178'>Mã xác nhận để đặt lại mật khẩu của bạn là:</p>
+                    <div style='background:#f7f3ee;border:2px dashed #b8975a;border-radius:8px;padding:20px;text-align:center;margin:20px 0'>
+                        <span style='font-size:2.5rem;font-weight:bold;color:#1a1a1a;letter-spacing:8px'>{otp}</span>
+                    </div>
+                    <p style='color:#8a8178;font-size:0.8rem'>⏱ Mã có hiệu lực trong <strong>10 phút</strong>. Nếu bạn không yêu cầu, hãy bỏ qua email này.</p>
+                </div>
+                <div style='background:#f7f3ee;padding:16px;text-align:center'>
+                    <p style='color:#8a8178;font-size:0.75rem;margin:0'>© 2026 Mai Trinh Studio</p>
+                </div>
+            </div>";
+
+            await SendEmailAsync(toEmail, toName, "🔑 Mã đặt lại mật khẩu - Mai Trinh Studio", html);
         }
 
         // ========== GỬI XÁC NHẬN ĐƠN HÀNG ==========

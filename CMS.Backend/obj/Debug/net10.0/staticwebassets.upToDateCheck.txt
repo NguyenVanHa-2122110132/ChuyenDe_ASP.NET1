@@ -63,6 +63,9 @@ D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\boo
 D:\ASP.NET\Buoi1-2\HaCMS_Solution\CMS.Backend\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\1.jpg
+wwwroot\images\2.jpg
+wwwroot\images\te-bo-dapxe.jpg
 wwwroot\images\áo sơ mi.png
 wwwroot\images\áo thun.png
 wwwroot\js\ckeditor.js

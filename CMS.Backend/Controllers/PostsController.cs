@@ -9,9 +9,10 @@
               - GetByCategory : Lấy bài viết theo danh mục
               - GetDetail     : Lấy chi tiết 1 bài viết
 */
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using CMS.Data;
+using CMS.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CMS.Backend.Controllers
 {
@@ -29,6 +30,7 @@ namespace CMS.Backend.Controllers
         // ========== GET ALL ==========
         // Địa chỉ: GET https://localhost:xxxx/api/posts
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult GetAll()
         {
             try
@@ -75,6 +77,7 @@ namespace CMS.Backend.Controllers
         // ========== GET DETAIL ==========
         // Địa chỉ: GET https://localhost:xxxx/api/posts/1
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public IActionResult GetDetail(int id)
         {
             var post = _context.Posts
@@ -84,6 +87,39 @@ namespace CMS.Backend.Controllers
                 return NotFound(new { message = "Không tìm thấy bài viết này trong hệ thống" });
             }
             return Ok(post);
+        }
+        // PUT: Sửa bài viết
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Administrator,Admin,Editor")]
+        public IActionResult Edit(int id, [FromBody] Post model)
+        {
+            var post = _context.Posts.Find(id);
+            if (post == null)
+                return NotFound(new { message = "Không tìm thấy bài viết." });
+
+            post.Title = model.Title;
+            post.Content = model.Content;
+            post.ImageUrl = model.ImageUrl;
+            post.CategoryId = model.CategoryId;
+
+            _context.Posts.Update(post);
+            _context.SaveChanges();
+
+            return Ok(new { message = "Cập nhật bài viết thành công." });
+        }
+        // DELETE: Xóa bài viết
+        [HttpDelete("{id}")]
+        [Authorize(Roles = "Administrator,Admin")]
+        public IActionResult Delete(int id)
+        {
+            var post = _context.Posts.Find(id);
+            if (post == null)
+                return NotFound(new { message = "Không tìm thấy bài viết." });
+
+            _context.Posts.Remove(post);
+            _context.SaveChanges();
+
+            return Ok(new { message = "Xóa bài viết thành công." });
         }
     }
 }

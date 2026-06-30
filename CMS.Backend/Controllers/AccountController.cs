@@ -111,6 +111,7 @@ namespace CMS.Backend.Controllers
                     );
 
                     if (user.Role == "Administrator" || user.Role == "Admin" ||
+                        user.Role == "Editor" ||
                         user.Role == "Sales" || user.Role == "Cashier" ||
                         user.Role == "Warehouse" || user.Role == "Technician" ||
                         user.Role == "Shipper" || user.Role == "Staff")

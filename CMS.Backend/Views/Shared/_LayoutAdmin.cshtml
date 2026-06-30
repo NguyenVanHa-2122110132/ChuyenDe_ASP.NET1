@@ -83,8 +83,20 @@
                         <a asp-controller="Order" asp-action="Index">
                             <i class="bi bi-cart3"></i> Đơn hàng
                         </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/PriceSetting">⚙️ Cấu hình giá</a>
+                        </li>
                         <a asp-controller="OrderDetail" asp-action="Index">
                             <i class="bi bi-list-check"></i> Đơn hàng chi tiết
+                        </a>
+                        <a asp-controller="Coupon" asp-action="Index">
+                            <i class="bi bi-ticket-perforated"></i> Mã giảm giá
+                        </a>
+                        <a asp-controller="Inventory" asp-action="Index">
+                            <i class="bi bi-box-seam"></i> Tồn kho
+                        </a>
+                        <a asp-controller="Comment" asp-action="Index">
+                            <i class="bi bi-chat-dots"></i> Bình luận
                         </a>
                     </div>
                 }

@@ -70,4 +70,58 @@
             </div>
         </div>
     </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning shadow-sm">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="card-title mb-1 fs-6">Mã giảm giá</p>
+                    <h2 class="fw-bold mb-0">@ViewBag.TotalCoupons</h2>
+                </div>
+                <i class="bi bi-ticket-perforated fs-1 opacity-50"></i>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a asp-controller="Coupon" asp-action="Index"
+                   class="text-white text-decoration-none small">
+                    Xem chi tiết →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-info shadow-sm">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="card-title mb-1 fs-6">Tồn kho</p>
+                    <h2 class="fw-bold mb-0">@ViewBag.TotalInventory</h2>
+                </div>
+                <i class="bi bi-box-seam fs-1 opacity-50"></i>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a asp-controller="Inventory" asp-action="Index"
+                   class="text-white text-decoration-none small">
+                    Xem chi tiết →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-white bg-secondary shadow-sm">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="card-title mb-1 fs-6">Bình luận</p>
+                    <h2 class="fw-bold mb-0">@ViewBag.TotalComments</h2>
+                </div>
+                <i class="bi bi-chat-dots fs-1 opacity-50"></i>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a asp-controller="Comment" asp-action="Index"
+                   class="text-white text-decoration-none small">
+                    Xem chi tiết →
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

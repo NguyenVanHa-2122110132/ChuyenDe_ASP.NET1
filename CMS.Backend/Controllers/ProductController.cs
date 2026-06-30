@@ -31,12 +31,38 @@ namespace CMS.Backend.Controllers
 
         // ========== INDEX ==========
         [Authorize(Roles = "Administrator,Admin,Sales,Cashier,Warehouse,Shipper")]
-        public IActionResult Index()
+        public IActionResult Index(string? search, int page = 1)
         {
-            var products = _context.Products
+            int pageSize = 10;
+
+            var query = _context.Products
                 .Include(p => p.CategoryProducts)
                     .ThenInclude(cp => cp.Category)
+                .AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p =>
+                    p.Name.Contains(search) ||
+                    p.Description != null && p.Description.Contains(search));
+            }
+
+            int totalItems = query.Count();
+            int totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+            if (page < 1) page = 1;
+            if (totalPages > 0 && page > totalPages) page = totalPages;
+
+            var products = query
+                .OrderByDescending(p => p.Id)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToList();
+
+            ViewBag.Search = search;
+            ViewBag.Total = totalItems;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(products);
         }
 

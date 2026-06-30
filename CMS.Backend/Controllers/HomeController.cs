@@ -18,7 +18,7 @@ using System.Diagnostics;
 
 namespace CMS.Backend.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseAdminController
     {
         private readonly ApplicationDbContext _context; // Biến kết nối database
 
@@ -46,6 +46,9 @@ namespace CMS.Backend.Controllers
             ViewBag.TotalCategories = _context.Categories.Count(); // Đếm tổng số danh mục
             ViewBag.TotalPosts = _context.Posts.Count();           // Đếm tổng số bài viết
             ViewBag.TotalCustomers = _context.Customers.Count();       // Đếm tổng số khách hàng
+            ViewBag.TotalCoupons = _context.Coupons.Count();           // ➕ Thêm
+            ViewBag.TotalInventory = _context.Inventories.Count();     // ➕ Thêm
+            ViewBag.TotalComments = _context.Comments.Count();         // ➕ Thêm
             return View();
         }
 

@@ -94,6 +94,7 @@ namespace CMS.Backend.Controllers
 
             existingUser.FullName = model.FullName;
             existingUser.Role = model.Role;
+            existingUser.Username = model.Username;
 
             if (!string.IsNullOrEmpty(model.PasswordHash))
             {

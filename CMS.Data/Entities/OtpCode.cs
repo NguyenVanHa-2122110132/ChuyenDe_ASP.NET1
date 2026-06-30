@@ -32,5 +32,6 @@ namespace CMS.Data.Entities
         public bool IsUsed { get; set; } = false; // Đã dùng chưa
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Thời gian tạo
+        public int FailedAttempts { get; set; } = 0; // Số lần nhập sai OTP, khóa khi đạt 5 lần
     }
 }
