@@ -123,7 +123,7 @@ ChuyenDe_ASP.NET1/
 ### Backend
 | Công nghệ | Mục đích |
 |-----------|----------|
-| ASP.NET Core 8 | Web API + MVC Framework |
+| ASP.NET Core.NET 10 | Web API + MVC Framework |
 | Entity Framework Core | ORM, Code-First |
 | SQL Server | Cơ sở dữ liệu chính |
 | JWT Bearer | Xác thực API |
@@ -134,7 +134,7 @@ ChuyenDe_ASP.NET1/
 ### Frontend
 | Công nghệ | Mục đích |
 |-----------|----------|
-| React 18 | UI Framework |
+| React 19 | UI Framework |
 | React Router v6 | Điều hướng trang |
 | Groq API | Chatbot AI tìm kiếm sản phẩm |
 | VietQR | Tạo mã QR thanh toán động |
@@ -146,9 +146,9 @@ ChuyenDe_ASP.NET1/
 ## 🚀 Hướng dẫn cài đặt
 
 ### Yêu cầu hệ thống
-- .NET 8 SDK
-- Node.js 18+
-- SQL Server 2019+
+- .NET 10 SDK
+- Node.js 19
+- SQL Server Management Studio 22
 - Visual Studio 2022
 
 ### 1. Clone dự án
